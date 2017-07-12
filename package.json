@@ -11,5 +11,20 @@
         "type": "git",
         "url": "https://github.com/nioinnovation/theme-nio"
     },
-    "license": "Apache 2"
+    "license": "Apache 2",
+    "scripts": {
+        "build-task:scss-compile": "node-sass-chokidar --source-map true book/scss/ -o book",
+        "build-task:autoprefixer": "postcss book/*.css --use autoprefixer -d book",
+        "sass:build": "npm-run-all -p build-task:*",
+        "sass:watch": "chokidar 'book/scss/**/*.scss' -c 'npm run sass:build'",
+        "dev": "npm-run-all -p sass:*"
+    },
+    "dependencies": {
+        "autoprefixer": "^7.1.2",
+        "chokidar-cli": "^1.2.0",
+        "nio-css-theme": "^2.2.0",
+        "node-sass-chokidar": "0.0.3",
+        "npm-run-all": "^4.0.2",
+        "postcss-cli": "^4.1.0"
+    }
 }

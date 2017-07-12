@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"scss/style.scss",
+		"../node_modules/nio-css-theme/shared/_core.scss",
+		"../node_modules/nio-css-theme/shared/_constants.scss",
+		"../node_modules/nio-css-theme/shared/_palette.scss",
+		"../node_modules/nio-css-theme/shared/_typography.scss",
+		"../node_modules/nio-css-theme/shared/_headings.scss",
+		"../node_modules/nio-css-theme/shared/_dividers.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAC,+DAAI;AAWZ,AKVA,iBLUiB,CACf,EAAE,CKXgB;EAClB,IAAI,EDuBS,MAAM,CArBC,GAAG,CAqBkB,UAAyC,CAzBjE,IAAI,EAAE,IAAI,CAAC,KAAK;ECGjC,WAAW,EAAE,MAAM,GACpB;;ALOD,AKLA,iBLKiB,CACf,EAAE,CKNI;EAEN,SAAS,EDcU,UAA4E,GCbhG;;ALND,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,IAAI,GAClB;;AAED,AAAA,QAAQ,CAAC;EACL,UAAU,EAAE,IAAI,GACnB;;AAED,AACE,iBADe,CACf,EAAE,CAAC;EAED,KAAK,EGXa,OAAO,GHY1B"
+}

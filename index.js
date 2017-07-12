@@ -6,7 +6,7 @@ module.exports = {
             "test.js"
         ],
         css: [
-            "test.css"
+            "style.css"
         ],
         html: {
             "html:start": function() {
@@ -31,7 +31,7 @@ module.exports = {
             "test.js"
         ],
         css: [
-            "test.css"
+            "style.css"
         ],
         html: {
             "html:start": function() {
