@@ -1,18 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import 'node_modules/nio-css-theme/shared/core';
+@import 'node_modules/nio-css-theme/shared/components/text-input';
 
 body {
   font-family: Lato;
 }
 
+.book-summary ul.summary li.active>a {
+  color: $palette-primary;
+  border-right: 4px solid $palette-primary;
+}
+
 .summary {
-    background: teal;
+  text-transform: lowercase;
 }
 
 .markdown-section {
+  font-family: Lato;
   h1 {
     @extend %nio-h1;
-    color: $palette-affirmative;
+    color: $palette-primary;
+  }
+  h2 {
+    @extend %nio-h2;
+  }
+  h3 {
+    @extend %nio-h3;
+  }
+  h4 {
+    @extend %nio-h4;
+  }
+  h5 {
+    @extend %nio-h5;
+  }
+  h6 {
+    @extend %nio-h6;
   }
 
+}
+
+#book-search-input {
+  padding: 1.5rem;
+  input {
+    @extend %nio-text-input--singleline;
+  }
 }
