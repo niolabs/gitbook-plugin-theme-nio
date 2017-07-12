@@ -1,0 +1,15 @@
+{
+    "name": "gitbook-theme-nio",
+    "description": "nio theme for gitbook",
+    "main": "index.js",
+    "version": "0.0.1",
+    "engines": {
+        "gitbook": ">3.0.0"
+    },
+    "homepage": "https://github.com/nioinnovation/gitbook-theme-nio",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nioinnovation/gitbook-theme-nio"
+    },
+    "license": "Apache 2",
+}
