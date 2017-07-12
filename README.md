@@ -1,8 +1,6 @@
-GitBook Sample Plugin
+GitBook Theming for niolabs
 ==============
 
-This is a model for GitBook plugins.
-
-## How GitBook plugin works?
+## How to use
 
 add the plugin to your book.json (example)
