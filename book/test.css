@@ -1,3 +1,7 @@
-body {
-    background: gold;
+.summary {
+    background: teal;
+}
+
+h1 {
+  color: teal;
 }
