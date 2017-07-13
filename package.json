@@ -19,7 +19,7 @@
         "sass:watch": "chokidar 'book/scss/**/*.scss' -c 'npm run sass:build'",
         "dev": "npm-run-all -p sass:*"
     },
-    "dependencies": {
+    "devDependencies": {
         "autoprefixer": "^7.1.2",
         "chokidar-cli": "^1.2.0",
         "nio-css-theme": "^2.2.0",
