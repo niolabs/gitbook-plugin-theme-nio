@@ -11,7 +11,7 @@ You will point the plugin to the private github repo like this (since `theme-nio
 
 ```
 "plugins": [
-    "theme-nio@git+ssh:git@github.com:nioinnovation/gitbook-plugin-theme-nio.git"
+    "theme-nio@git://github.com/nioinnovation/gitbook-plugin-theme-nio.git"
   ]
 ```
 
