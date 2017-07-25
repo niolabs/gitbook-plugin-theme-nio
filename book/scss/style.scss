@@ -45,3 +45,9 @@ body {
     @extend %nio-text-input--singleline;
   }
 }
+
+$header-height: 63px;
+.book-summary,
+.book-body {
+  top: $header-height;
+}
