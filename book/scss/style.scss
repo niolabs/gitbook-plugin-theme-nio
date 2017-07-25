@@ -15,29 +15,26 @@ body {
   text-transform: lowercase;
 }
 
-.markdown-section {
-  font-family: Lato;
-  h1 {
-    @extend %nio-h1;
-    color: $palette-primary;
-  }
-  h2 {
-    @extend %nio-h2;
-  }
-  h3 {
-    @extend %nio-h3;
-  }
-  h4 {
-    @extend %nio-h4;
-  }
-  h5 {
-    @extend %nio-h5;
-  }
-  h6 {
-    @extend %nio-h6;
-  }
-
+h1 {
+  @extend %nio-h1;
+  color: $palette-primary;
 }
+h2 {
+  @extend %nio-h2;
+}
+h3 {
+  @extend %nio-h3;
+}
+h4 {
+  @extend %nio-h4;
+}
+h5 {
+  @extend %nio-h5;
+}
+h6 {
+  @extend %nio-h6;
+}
+
 
 #book-search-input {
   padding: 1.5rem;
@@ -50,4 +47,8 @@ $header-height: 63px;
 .book-summary,
 .book-body {
   top: $header-height;
+}
+
+.page-inner {
+  min-height: 60vh;
 }
