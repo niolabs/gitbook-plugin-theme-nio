@@ -6,7 +6,7 @@ module.exports = {
             "test.js"
         ],
         css: [
-            "style.css"
+            "style.css", "header.css", "footer.css"
         ],
         html: {
             "html:start": function() {
@@ -25,7 +25,7 @@ module.exports = {
     },
 
     // Extend ebook resources and html
-    website: {
+    ebook: {
         assets: "./book",
         js: [
             "test.js"
