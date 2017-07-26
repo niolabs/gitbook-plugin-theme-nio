@@ -4,6 +4,10 @@
 
 body {
   font-family: Lato;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
 }
 
 .book-summary ul.summary li.active>a {
@@ -41,12 +45,6 @@ h6 {
   input {
     @extend %nio-text-input--singleline;
   }
-}
-
-$header-height: 63px;
-.book-summary,
-.book-body {
-  top: $header-height;
 }
 
 .page-inner {

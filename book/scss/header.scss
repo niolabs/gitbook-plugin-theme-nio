@@ -23,8 +23,11 @@
 }
 
 .header__logo {
-  height: 40px;
-  margin: 0.75rem 0;
+  height: 20px;
+  margin: 0.75em 0;
+  @media (min-width: $desktop) {
+    height: 40px;
+  }
 }
 
 .header__toggle {
@@ -59,9 +62,9 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 40px;
+  width: 25px;
   margin: 1em 0;
-  border-bottom: 2px solid $palette-zinc;
+  border-bottom: 1px solid $palette-zinc;
   border-top: 2px solid $palette-zinc;
   border-radius: $burger--thickness;
   transition : border 0.5s ease-out;
@@ -82,10 +85,10 @@
     transition: transform 0.5s ease-in-out;
   }
   &:before {
-    bottom: 10px;
+    bottom: 7px;
   }
   &:after {
-    top: 10px;
+    top: 6px;
   }
 }
 
