@@ -3,7 +3,7 @@
 @import 'node_modules/nio-css-theme/shared/components/text-input';
 
 .markdown-section, body {
-  font: normal 400 16px / 1.5 Lato, sans serif;
+  font: normal 400 16px / 1.6 Lato, sans serif;
   font-family: Lato;
   font-weight: 400;
   -ms-overflow-style: none;
@@ -13,9 +13,13 @@
 }
 
 .book-summary {
-  font: normal 400 16px / 1.5 Lato, sans serif;
+  font: normal 400 16px / 1.4 Lato, sans serif;
 }
 
+.book-summary ul.summary li a:hover {
+  text-decoration: none;
+  color: $palette-alternate;
+}
 .book-summary ul.summary li.active>a {
   color: $palette-primary;
   border-right: 4px solid $palette-primary;
@@ -25,36 +29,54 @@
   text-transform: lowercase;
 }
 
+.markdown-section a {
+  color: $palette-primary;
+  font: normal 400 16px / 1.5 Lato, sans serif;
+  margin-right: 0;
+}
+
+.markdown-section a:hover {
+  text-decoration: none;
+  color: $palette-alternate;
+}
+
 .markdown-section h1 {
   @extend %nio-h1;
   font-size: 48px;
   font-weight: 500;
   color: $palette-primary;
+  line-height: 55px;
+  margin: 1.3rem 0;
 }
 .markdown-section h2 {
   @extend %nio-h2;
   font-size: 28px;
   font-weight: 300;
+  line-height: 38px;
 }
 .markdown-section h3 {
   @extend %nio-h3;
   font-size: 22px;
   font-weight: 400;
+  line-height: 32px;
 }
 .markdown-section h4 {
   @extend %nio-h4;
   font-size: 18px;
   font-weight: 400;
+  line-height: 28px;
 }
 .markdown-section h5 {
   @extend %nio-h5;
   font-size: 16px;
   font-weight: 300;
+  line-height: 26px;
 }
 .markdown-section h6 {
   @extend %nio-h6;
   font-size: 14px;
   font-weight: 700;
+  line-height: 28px;
 }
 
 .label {
