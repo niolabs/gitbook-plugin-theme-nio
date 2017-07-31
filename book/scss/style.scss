@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700');
 @import 'node_modules/nio-css-theme/shared/core';
 @import 'node_modules/nio-css-theme/shared/components/text-input';
 
-body {
+.markdown-section, body {
+  font: normal 400 16px / 1.5 Lato, sans serif;
   font-family: Lato;
+  font-weight: 400;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     width: 0 !important
   }
+}
+
+.book-summary {
+  font: normal 400 16px / 1.5 Lato, sans serif;
 }
 
 .book-summary ul.summary li.active>a {
@@ -19,26 +25,50 @@ body {
   text-transform: lowercase;
 }
 
-h1 {
+.markdown-section h1 {
   @extend %nio-h1;
+  font-size: 48px;
+  font-weight: 500;
   color: $palette-primary;
 }
-h2 {
+.markdown-section h2 {
   @extend %nio-h2;
+  font-size: 28px;
+  font-weight: 300;
 }
-h3 {
+.markdown-section h3 {
   @extend %nio-h3;
+  font-size: 22px;
+  font-weight: 400;
 }
-h4 {
+.markdown-section h4 {
   @extend %nio-h4;
+  font-size: 18px;
+  font-weight: 400;
 }
-h5 {
+.markdown-section h5 {
   @extend %nio-h5;
+  font-size: 16px;
+  font-weight: 300;
 }
-h6 {
+.markdown-section h6 {
   @extend %nio-h6;
+  font-size: 14px;
+  font-weight: 700;
 }
 
+.label {
+  font-size: 0.85714286rem;
+  font-weight: 600;
+}
+
+.markdown-section {
+  pre {
+    border: 0.5px solid $palette-snow;
+    border-radius: 7px;
+    color: #354042;
+  }
+}
 
 #book-search-input {
   padding: 1.5rem;
