@@ -4,8 +4,6 @@
 
 .markdown-section, body {
   font: normal 400 16px / 1.6 Lato, sans serif;
-  font-family: Lato;
-  font-weight: 400;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     width: 0 !important
@@ -46,7 +44,7 @@
   font-weight: 500;
   color: $palette-primary;
   line-height: 55px;
-  margin: 1.3rem 0;
+  margin-bottom: 1.7rem;
 }
 .markdown-section h2 {
   @extend %nio-h2;
