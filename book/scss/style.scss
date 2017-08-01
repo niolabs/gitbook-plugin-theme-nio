@@ -10,6 +10,12 @@ body {
   }
 }
 
+.page-inner {
+  @media screen and (min-width: 1400px) {
+    margin-left: 150px;
+  }
+}
+
 .book-summary ul.summary li.active>a {
   color: $palette-primary;
   border-right: 4px solid $palette-primary;
