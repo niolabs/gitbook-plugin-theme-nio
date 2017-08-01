@@ -115,9 +115,19 @@
 }
 
 #book-search-input {
-  padding: 1.5rem;
+  padding: 2.5rem;
   input {
+    @extend %nio-text-input;
     @extend %nio-text-input--singleline;
+    padding: 2rem;
+    &:hover {
+      @extend %nio-text-input;
+      @extend %nio-text-input--singleline;
+      padding: 2rem;
+    }
+    &:focus {
+      padding: 2rem;
+    }
   }
 }
 
