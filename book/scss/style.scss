@@ -5,10 +5,13 @@
 .markdown-section, body {
   font: normal 400 16px / 1.6 Lato, sans serif;
   -ms-overflow-style: none;
+  color: $palette-black;
   &::-webkit-scrollbar {
     width: 0 !important
   }
-}.page-inner {
+}
+
+.page-inner {
   @media screen and (min-width: 1400px) {
     margin-left: 150px;
   }
@@ -18,6 +21,11 @@
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
 }
+
+.book-summary ul.summary li a {
+  padding-left: 2.5rem;
+}
+
 
 .book-summary ul.summary li a:hover {
   text-decoration: none;
@@ -33,6 +41,10 @@
   text-transform: lowercase;
 }
 
+.markdown-section {
+  color: $palette-black;
+}
+
 .markdown-section a {
   color: $palette-primary;
   font: normal 400 16px / 1.5 Lato, sans serif;
@@ -42,6 +54,20 @@
 .markdown-section a:hover {
   text-decoration: none;
   color: $palette-alternate;
+}
+
+.chapter {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.articles{
+  .chapter {
+    a {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
 }
 
 .markdown-section h1 {
