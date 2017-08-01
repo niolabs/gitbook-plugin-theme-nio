@@ -124,7 +124,7 @@
         display: block; } }
 
 .nav__list--anchor {
-  font-weight: 300;
+  font-weight: 400;
   color: #9DAAB1;
   text-decoration: none; }
   .nav__list--anchor.active, .nav__list--anchor.active:visited, .nav__list--anchor:hover, .nav__list--anchor:active {
