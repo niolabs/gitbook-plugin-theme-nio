@@ -21,18 +21,48 @@
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
   ul.summary {
-    li {
-      a {
-        padding-left: 2.5rem;
+    li.chapter {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22.5px;
+      &.active > a {
+        color: $palette-primary;
         &:hover {
           text-decoration: none;
-          color: $palette-alternate;
+          color: $palette-primary;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          height: 3.5rem;
+          width: 5px;
+          border-radius: 3px;
+          background-color: $palette-primary;
+          top: 4px;
+          left: 0;
+        }
+      }
+      a {
+        padding: 10px 2.5rem;
+        color: $palette-slate;
+        display: block;
+        text-decoration: none;
+        position: relative;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none;
+          color: $palette-black;
         }
       }
     }
-    li.active > a {
-      color: $palette-primary;
-      border-right: 4px solid $palette-primary;
+    ul.articles {
+      padding-left: 0;
+      a {
+        padding-left: 5rem;
+        font-size: 16px;
+        font-weight: 300;
+      }
     }
   }
 }
@@ -85,28 +115,14 @@
     color: $palette-primary;
     &:hover {
       text-decoration: none;
-      color: $palette-alternate;
+      color: $palette-black;
     }
   }
   pre {
     border: 0.5px solid $palette-snow;
     border-radius: 7px;
-    color: #354042;
+    color: $palette-slate;
     margin-top: 2.5rem;
-  }
-}
-
-.chapter {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.articles{
-  .chapter {
-    a {
-      font-size: 16px;
-      font-weight: 300;
-    }
   }
 }
 
@@ -121,6 +137,7 @@
     @extend %nio-text-input;
     @extend %nio-text-input--singleline;
     padding: 2rem;
+    height: 45px;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
