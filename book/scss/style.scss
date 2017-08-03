@@ -12,9 +12,13 @@
 }
 
 .page-inner {
-  @media screen and (min-width: 1400px) {
-    margin-left: 150px;
+  @media screen and (min-width: 1210px) {
+    margin-left: 60px;
   }
+}
+
+.book-header {
+  font: normal 400 16px / 1.6 Lato, sans serif;
 }
 
 .book-summary {
@@ -142,13 +146,59 @@
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
       padding: 2rem;
+      height: 45px;
     }
     &:focus {
       padding: 2rem;
+      height: 45px;
     }
   }
 }
 
 .page-inner {
+  font: normal 400 16px / 1.6 Lato, sans serif;
   min-height: 60vh;
+}
+
+#book-search-results {
+  .search-results {
+    h1.search-results-title {
+      font-size: 36px;
+      text-align: left;
+      color: $palette-slate;
+    }
+    .has-results {
+      .search-results-item {
+        color: $palette-black;
+        h3 {
+          font-size: 36px;
+          font-weight: 300;
+          margin-bottom: 16px;
+          a {
+            color: $palette-primary;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fa.circle-background {
+  &::before {
+    height: 2.3rem;
+    width: 2.3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    &::before {
+      background-color: $palette-primary;
+    }
+  }
 }
