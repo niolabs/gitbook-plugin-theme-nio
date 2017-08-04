@@ -29,6 +29,9 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 22.5px;
+      &.active--chapter > a {
+        color: $palette-black;
+      }
       &.active > a {
         color: $palette-primary;
         &:hover {
@@ -59,13 +62,29 @@
           color: $palette-black;
         }
       }
-    }
-    ul.articles {
-      padding-left: 0;
-      a {
-        padding-left: 5rem;
-        font-size: 16px;
-        font-weight: 300;
+      ul.articles {
+        padding-left: 0;
+        a {
+          padding-left: 5rem;
+          font-size: 16px;
+          font-weight: 300;
+        }
+        li.chapter {
+          ul.articles {
+            li.chapter {
+              a {
+                padding-left: 7rem;
+              }
+              ul.articles {
+                li.chapter {
+                  a {
+                    padding-left: 8.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
