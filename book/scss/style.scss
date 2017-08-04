@@ -12,27 +12,83 @@
 }
 
 .page-inner {
-  @media screen and (min-width: 1400px) {
-    margin-left: 150px;
+  @media screen and (min-width: 1210px) {
+    margin-left: 60px;
   }
+}
+
+.book-header {
+  font: normal 400 16px / 1.6 Lato, sans serif;
 }
 
 .book-summary {
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
   ul.summary {
-    li {
-      a {
-        padding-left: 2.5rem;
+    li.chapter {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22.5px;
+      &.active--chapter > a {
+        color: $palette-primary;
         &:hover {
-          text-decoration: none;
-          color: $palette-alternate;
+          color: $palette-primary;
         }
       }
-    }
-    li.active > a {
-      color: $palette-primary;
-      border-right: 4px solid $palette-primary;
+      &.active > a {
+        color: $palette-primary;
+        &:hover {
+          text-decoration: none;
+          color: $palette-primary;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          height: 3.5rem;
+          width: 5px;
+          border-radius: 3px;
+          background-color: $palette-primary;
+          top: 4px;
+          left: 0;
+        }
+      }
+      a {
+        padding: 10px 2.5rem;
+        color: $palette-slate;
+        display: block;
+        text-decoration: none;
+        position: relative;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none;
+          color: $palette-black;
+        }
+      }
+      ul.articles {
+        padding-left: 0;
+        a {
+          padding-left: 5rem;
+          font-size: 16px;
+          font-weight: 300;
+        }
+        li.chapter {
+          ul.articles {
+            li.chapter {
+              a {
+                padding-left: 7rem;
+              }
+              ul.articles {
+                li.chapter {
+                  a {
+                    padding-left: 8.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -85,28 +141,14 @@
     color: $palette-primary;
     &:hover {
       text-decoration: none;
-      color: $palette-alternate;
+      color: $palette-black;
     }
   }
   pre {
     border: 0.5px solid $palette-snow;
     border-radius: 7px;
-    color: #354042;
+    color: $palette-slate;
     margin-top: 2.5rem;
-  }
-}
-
-.chapter {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.articles{
-  .chapter {
-    a {
-      font-size: 16px;
-      font-weight: 300;
-    }
   }
 }
 
@@ -121,17 +163,64 @@
     @extend %nio-text-input;
     @extend %nio-text-input--singleline;
     padding: 2rem;
+    height: 45px;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
       padding: 2rem;
+      height: 45px;
     }
     &:focus {
       padding: 2rem;
+      height: 45px;
     }
   }
 }
 
 .page-inner {
+  font: normal 400 16px / 1.6 Lato, sans serif;
   min-height: 60vh;
+}
+
+#book-search-results {
+  .search-results {
+    h1.search-results-title {
+      font-size: 36px;
+      text-align: left;
+      color: $palette-slate;
+    }
+    .has-results {
+      .search-results-item {
+        color: $palette-black;
+        h3 {
+          font-size: 36px;
+          font-weight: 300;
+          margin-bottom: 16px;
+          a {
+            color: $palette-primary;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fa.circle-background {
+  &::before {
+    height: 2.3rem;
+    width: 2.3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    &::before {
+      background-color: $palette-primary;
+    }
+  }
 }

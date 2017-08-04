@@ -3,7 +3,7 @@ module.exports = {
     website: {
         assets: "./book",
         js: [
-            "test.js"
+            "nio.js"
         ],
         css: [
             "style.css", "header.css", "footer.css"
@@ -28,7 +28,7 @@ module.exports = {
     ebook: {
         assets: "./book",
         js: [
-            "test.js"
+            "nio.js"
         ],
         css: [
             "style.css"
