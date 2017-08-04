@@ -30,10 +30,7 @@
       font-weight: 600;
       line-height: 22.5px;
       &.active--chapter > a {
-        color: $palette-primary;
-        &:hover {
-          color: $palette-primary;
-        }
+        color: $palette-black;
       }
       &.active > a {
         color: $palette-primary;
@@ -70,7 +67,7 @@
         a {
           padding-left: 5rem;
           font-size: 16px;
-          font-weight: 300;
+          font-weight: 400;
         }
         li.chapter {
           ul.articles {
