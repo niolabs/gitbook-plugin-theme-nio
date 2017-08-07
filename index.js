@@ -75,10 +75,13 @@ module.exports = {
         "init": function() {
             console.log("init!");
         },
-
         // This is called after the book generation
         "finish": function() {
             console.log("finish!");
+        },
+        config: function(config) {
+            config.styles = config.styles || config.pluginsConfig['theme-nio'].styles;
+            return config;
         }
     }
 };
