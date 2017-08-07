@@ -1,4 +1,4 @@
-function getEmbedURL(url, height, width){
+function getEmbedDiv(url, height, width){
     height = height || '100%';
     width = width || '100%';
 
@@ -79,7 +79,7 @@ module.exports = {
         },
         video: {
             process: function(block) {
-                return getEmbedURL(block.body);
+                return getEmbedDiv(block.body);
             }
         }
     },
