@@ -7,7 +7,7 @@ This plugin will give your gitbooks niolabs-styling.
 
 Add the plugin to your book.json file.
 
-You will point the plugin to the private github repo like this (since `theme-nio` is not currently published to npm):
+You will point the plugin to the nioinnovation GitHub repo like this (since `theme-nio` is not currently published to npm):
 
 ```json
 "plugins": [
@@ -19,6 +19,7 @@ Note: `theme-nio` is the name to use for the plugin, the standard `gitbook-plugi
 
 ## Configuration
 
+### Active Location in Header
 To highlight the active location of your book in the header, specify `active-location` in the `pluginsConfig`
 
 ```json
@@ -31,7 +32,9 @@ To highlight the active location of your book in the header, specify `active-loc
 
 The active class will be added to the corresponding nav item with `id="nav__list--${active-location}"`. For example, , if present, the above configuration will highlight the nav item with `id="nav__list--workshop"`.
 
-## blocks
+## Blocks
+
+### video embed
 To embed a video, use the following block in the text of your book
 
 ```{% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}```
