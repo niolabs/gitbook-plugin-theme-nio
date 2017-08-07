@@ -104,7 +104,7 @@ module.exports = {
         "finish": function() {
             console.log("finish!");
         },
-        config: function(config) {
+        "config": function(config) {
             config.styles = config.styles || config.pluginsConfig['theme-nio'].styles;
             return config;
         }
