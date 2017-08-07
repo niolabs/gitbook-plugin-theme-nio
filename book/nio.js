@@ -2,6 +2,7 @@ require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function(event) {
       const activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
       $(`#nav__list--${activeLocation}`).addClass('active');
+      $('#book-search-input input').attr('placeholder', 'search');
     	// Remove active chapter globally
      	$('ul.summary li').removeClass('active--chapter');
     	// this will give us the selected sub-menus level
