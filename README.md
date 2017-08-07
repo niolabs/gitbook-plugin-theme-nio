@@ -20,7 +20,7 @@ Note: `theme-nio` is the name to use for the plugin, the standard `gitbook-plugi
 ## Configuration
 
 ### Active Location in Header
-To highlight the active location of your book in the header, specify `active-location` in the `pluginsConfig`
+To highlight the active location of your book in the header, specify `active-location` in the `pluginsConfig` for `theme-nio`
 
 ```json
 "pluginsConfig": {
@@ -30,7 +30,7 @@ To highlight the active location of your book in the header, specify `active-loc
   }
 ```
 
-The active class will be added to the corresponding nav item with `id="nav__list--${active-location}"`. For example, , if present, the above configuration will highlight the nav item with `id="nav__list--workshop"`.
+The active class will be added to the nav item with the corresponding id: `id="nav__list--${active-location}"`. For examplethe above configuration will highlight any nav item where `id="nav__list--workshop"`.
 
 ## Blocks
 
