@@ -1,0 +1,9 @@
+{% extends template.self %}
+
+{% block body %}
+  {% include "./_header.html" %}
+
+  {{ super() }}
+
+  {% include "./_footer.html" %}
+{% endblock %}

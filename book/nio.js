@@ -1,9 +1,14 @@
 require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function(event) {
+      // allow dynamic active location in the header
+      const activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
+      $(`#nav__list--${activeLocation}`).addClass('active');
+      // custom search bar placeholder text
+      $('#book-search-input input').attr('placeholder', 'search');
     	// Remove active chapter globally
      	$('ul.summary li').removeClass('active--chapter');
     	// this will give us the selected sub-menus level
-     	const level = $('ul.summary li li.active').data('level'); 
+      const level = $('ul.summary li li.active').data('level');
      	if (level) {
 	     	// find the position of the second period
 	     	const dot = level.indexOf('.', 2);
