@@ -9,10 +9,24 @@ Add the plugin to your book.json file.
 
 You will point the plugin to the private github repo like this (since `theme-nio` is not currently published to npm):
 
-```
+```json
 "plugins": [
     "theme-nio@git://github.com/nioinnovation/gitbook-plugin-theme-nio.git"
   ]
 ```
 
 Note: `theme-nio` is the name to use for the plugin, the standard `gitbook-plugin` prefix will automatically be prepended to this root when you run `gitbook install` on your book.
+
+## Configuration
+
+To highlight the active location of your book in the header, specify `active-location` in the `pluginsConfig`
+
+```json
+"pluginsConfig": {
+    "theme-nio": {
+      "active-location": "workshop"
+    }
+  }
+```
+
+The active class will be added to the corresponding nav item with `id="nav__list--${active-location}"`. For example, , if present, the above configuration will highlight the nav item with `id="nav__list--workshop"`.
