@@ -34,7 +34,7 @@ The active class will be added to the corresponding nav item with `id="nav__list
 
 ## Blocks
 
-### video embed
-To embed a video, use the following block in the text of your book
+### Video Embed
+To embed a video, use the following block in the text of your book. The watch url will be transformed into an embed url. Both YouTube and Vimeo urls are supported.
 
 ```{% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}```
