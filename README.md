@@ -30,3 +30,8 @@ To highlight the active location of your book in the header, specify `active-loc
 ```
 
 The active class will be added to the corresponding nav item with `id="nav__list--${active-location}"`. For example, , if present, the above configuration will highlight the nav item with `id="nav__list--workshop"`.
+
+## blocks
+To embed a video, use the following block in the text of your book
+
+```{% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}```
