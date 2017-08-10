@@ -2,11 +2,11 @@ function getEmbedDiv(url, height, width){
     height = height || '100%';
     width = width || '100%';
 
-    let content = '';
-    const vimeoID = url.match(/^https?:\/\/(www\.)?vimeo\.com\/(clip\:)?(\d+).*$/);
-    const youTubeID = url.match(/watch\?v=([a-zA-Z0-9\-_]+)/);
+    var content = '';
+    var vimeoID = url.match(/^https?:\/\/(www\.)?vimeo\.com\/(clip\:)?(\d+).*$/);
+    var youTubeID = url.match(/watch\?v=([a-zA-Z0-9\-_]+)/);
 
-    const style = `border:none; position:absolute; top:0; left:0; width:${width}; height:${height}`;
+    var style = `border:none; position:absolute; top:0; left:0; width:${width}; height:${height}`;
 
     if (youTubeID) {
         content = `<iframe style="${style}" src="https://www.youtube.com/embed/${youTubeID[1]}?rel=0" frameborder="0" allowfullscreen>`;
