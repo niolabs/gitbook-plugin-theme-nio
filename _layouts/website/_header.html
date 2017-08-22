@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__container">
-        <a href="https://app.n.io" class="nio-logo">
+        <a href="https://app.n.io">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702.55 318.26" class="header__logo">
                 <title>nio_logowhite-01</title>
                 <path d="M163.08,313.36v-115c0-33.42-18.27-58.82-53-58.82-33.42,0-56.15,28.07-56.15,61.49V313.36H0V93.25H48.55l3.57,29.85c22.28-21.84,44.56-33,72.19-33,51.69,0,93.13,38.77,93.13,107.84V313.36Z" style="fill: rgb(255, 255, 255);"></path>
@@ -15,13 +15,40 @@
         <nav class="nav">
             <ul class="nav__list list-unstyled">
                 <li class="nav__list--item">
-                    <a id="nav__list--docs" href="https://docs.n.io" target="_blank" class="nav__list--anchor">docs</a>
+                    <a id="nav__list--docs" href="https://docs.n.io" class="nav__list--anchor">docs</a>
                 </li>
                 <li class="nav__list--item">
-                    <a id="nav__list--workshop" href="https://nio.school" target="_blank" class="nav__list--anchor">workshops</a>
+                    <a id="nav__list--workshop" href="https://nio.school" class="nav__list--anchor">workshops</a>
                 </li>
-                <li class="nav__list--item"><a href="https://designer.n.io" class="button__designer">
-            go to designer<span> (only available on desktop)</span></a></li>
+                <li class="nav__list--item">
+                    <a id="nav__list--workshop" href="https://app.n.io/settings" class="nav__list--anchor">support</a>
+                    <!-- Mobile Sub-Navigation Toggle -->
+                    <input class="nav-item__toggle" id="sub-nav__support" type="checkbox">
+                    <label class="nav-item__toggle--label" for="sub-nav__support">
+                        <i class="nio nio-add default"></i>
+                        <i class="nio nio-minus checked"></i>
+                    </label>
+                    <!-- Sub-Navigation -->
+                    <ul class="sub-nav list-unstyled">
+                        <li class="sub-nav__item"><a href="https://forum.n.io" class="sub-nav__item--anchor">forum</a></li>
+                        <li class="sub-nav__item"><a href="https://app.n.io/support/faqs" class="sub-nav__item--anchor">faqs</a></li>
+                        <li class="sub-nav__item"><a href="https://app.n.io/support/contact" class="sub-nav__item--anchor">contact us</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list--item nav__list--item--settings">
+                    <a href="https://app.n.io" class="nav__list--anchor">
+                        <i class="nio nio-profile"></i>
+                        <span>settings</span>
+                    </a>
+                </li>
+                <li class="nav__list--item nav__list--item--designer">
+                  <a href="https://designer.n.io">
+                  <button class="n-button n-button--primary">
+                    go to designer
+                  </button>
+                  </a>
+                  <span>go to designer (only available on desktop)</span>
+                </li>
             </ul>
         </nav>
     </div>
