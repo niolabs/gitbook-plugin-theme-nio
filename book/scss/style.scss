@@ -17,6 +17,11 @@
   }
 }
 
+.page-toc {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
 .book-header {
   font: normal 400 16px / 1.6 Lato, sans serif;
 }
@@ -29,6 +34,16 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 22.5px;
+      &.active,
+      &.active--chapter {
+        &.animating ul.articles {
+          max-height: 0;
+        }
+        ul.articles {
+          max-height: 600px;
+          transition: max-height 1000ms;
+        }
+      }
       &.active--chapter > a {
         color: $palette-black;
       }
@@ -63,7 +78,10 @@
         }
       }
       ul.articles {
+        max-height: 0;
+        overflow: hidden;
         padding-left: 0;
+        transition: max-height 1000ms;
         a {
           padding-left: 5rem;
           font-size: 16px;
@@ -146,6 +164,9 @@
     border-radius: 7px;
     color: $palette-slate;
     margin-top: 2.5rem;
+  }
+  sup {
+    font-size: 11px;
   }
 }
 
