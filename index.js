@@ -18,6 +18,11 @@ function getEmbedDiv(url, height, width){
     return `<div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">${content}</div>`;
 }
 
+function getYear(time){
+  var year = new Date().getFullYear().toString();
+  return year;
+}
+
 module.exports = {
     // Extend website resources and html
     website: {
@@ -81,6 +86,11 @@ module.exports = {
             process: function(block) {
                 return getEmbedDiv(block.body);
             }
+        },
+        year: {
+          process: function(block) {
+            return getYear();
+          }
         }
     },
 

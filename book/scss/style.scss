@@ -29,6 +29,18 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 22.5px;
+      &.active {
+        ul.articles {
+          max-height: 500px;
+          transition: max-height 1000ms;
+        }
+      }
+      &.active--chapter {
+        ul.articles {
+          max-height: 500px;
+          transition: max-height 1000ms;
+        }
+      }
       &.active--chapter > a {
         color: $palette-black;
       }
@@ -63,7 +75,10 @@
         }
       }
       ul.articles {
+        max-height: 0;
+        overflow: hidden;
         padding-left: 0;
+        transition: max-height 1000ms;
         a {
           padding-left: 5rem;
           font-size: 16px;
@@ -146,6 +161,9 @@
     border-radius: 7px;
     color: $palette-slate;
     margin-top: 2.5rem;
+  }
+  sup {
+    font-size: 11px;
   }
 }
 
