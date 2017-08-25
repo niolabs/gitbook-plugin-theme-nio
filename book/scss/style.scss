@@ -35,10 +35,10 @@
           max-height: 0;
         }
         ul.articles {
-          max-height: 500px;
+          max-height: 600px;
           transition: max-height 1000ms;
         }
-      } 
+      }
       &.active--chapter > a {
         color: $palette-black;
       }

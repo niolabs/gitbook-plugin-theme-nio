@@ -74,7 +74,7 @@
     .book-summary ul.summary li.chapter.active.animating ul.articles, .book-summary ul.summary li.chapter.active--chapter.animating ul.articles {
       max-height: 0; }
     .book-summary ul.summary li.chapter.active ul.articles, .book-summary ul.summary li.chapter.active--chapter ul.articles {
-      max-height: 500px;
+      max-height: 600px;
       -webkit-transition: max-height 1000ms;
       transition: max-height 1000ms; }
     .book-summary ul.summary li.chapter.active--chapter > a {
