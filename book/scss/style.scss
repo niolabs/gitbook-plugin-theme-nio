@@ -29,18 +29,16 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 22.5px;
-      &.active {
-        ul.articles {
-          max-height: 500px;
-          transition: max-height 1000ms;
-        }
-      }
+      &.active,
       &.active--chapter {
+        &.animating ul.articles {
+          max-height: 0;
+        }
         ul.articles {
           max-height: 500px;
           transition: max-height 1000ms;
         }
-      }
+      } 
       &.active--chapter > a {
         color: $palette-black;
       }
