@@ -37,4 +37,14 @@ The active class will be added to the nav item with the corresponding id: `id="n
 ### Video Embed
 To embed a video, use the following block in the text of your book. The "watch" link will be transformed into a div containing an iframe with an embed url. Both YouTube and Vimeo links are supported.
 
-```{% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}```
+```text
+{% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}
+```
+
+### Dynamic Year
+The tag
+```text
+{% year %}{% endyear %}
+```
+
+Will display the current year.
