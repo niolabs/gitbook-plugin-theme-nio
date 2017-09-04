@@ -56,7 +56,22 @@ $border-radius: 7px;
 
 .page-toc {
   margin-bottom: 2rem;
-  margin-left: 2rem;
+  margin-left: 2.5rem;
+  max-width: 280px;
+  border-radius: $border-radius;
+  background-color: white;
+  color: $palette-zinc;
+}
+
+.back-to-top {
+  background: rgba($palette-alert, 0.5);
+  &:hover {
+    background: rgba($palette-zinc, 0.5);
+  }
+}
+
+.navigation:hover {
+  color: $palette-slate;
 }
 
 .book-header {
@@ -198,7 +213,7 @@ $border-radius: 7px;
   }
   pre {
     border: 0.5px solid $palette-snow;
-    border-radius: 7px;
+    border-radius: $border-radius;
     color: $palette-slate;
     margin-top: 2.5rem;
   }
