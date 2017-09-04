@@ -2,12 +2,49 @@
 @import 'node_modules/nio-css-theme/shared/core';
 @import 'node_modules/nio-css-theme/shared/components/text-input';
 
+$border-radius: 7px;
+
 .markdown-section, body {
   font: normal 400 16px / 1.6 Lato, sans serif;
   -ms-overflow-style: none;
   color: $palette-black;
   &::-webkit-scrollbar {
     width: 0 !important
+  }
+}
+
+.markdown-section blockquote {
+  padding: 1.5rem;
+  border-radius: 0 $border-radius $border-radius 0;
+  border-width: 5px;
+  color: $palette-slate;
+  &.info {
+    background: rgba($palette-primary, 0.15);
+    border-color: $palette-primary;
+    strong {
+      color: $palette-primary;
+    }
+  }
+  &.warning {
+    background: rgba($palette-warning, 0.18);
+    border-color: $palette-warning;
+    strong {
+      color: $palette-warning;
+    }
+  }
+  &.danger {
+    background: rgba($palette-danger, 0.1);
+    border-color: $palette-danger;
+    strong {
+      color: $palette-danger;
+    }
+  }
+  &.success {
+    background: rgba($palette-affirmative, 0.15);
+    border-color: $palette-affirmative;
+    strong {
+      color: $palette-affirmative;
+    }
   }
 }
 
