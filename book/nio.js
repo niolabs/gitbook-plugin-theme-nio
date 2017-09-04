@@ -28,7 +28,7 @@ require(["gitbook"], function(gitbook) {
       }, 50);
 
       // add class to blockquote according to key
-      var bqs = $('blockquote');
+      var blkquotes = $('blockquote');
       var classMap = {
           '[info]': 'info',
           '[warning]': 'warning',
@@ -42,17 +42,18 @@ require(["gitbook"], function(gitbook) {
           '[danger]': '<i class="fa fa-ban"></i>',
           '[success]': '<i class="fa fa-check-circle"></i>'
       }
-      bqs.each(function() {
-        for (key in classMap) {
+
+      blkquotes.each(function() {
+        for (alertType in classMap) {
             htmlStr = $(this).html()
 
-            if (htmlStr.indexOf(key) > 0) {
-                // remove key from text, replace with icon
-                htmlStr = htmlStr.replace(key, iconMap[key]);
+            if (htmlStr.indexOf(alertType) > 0) {
+                // remove alertType from text, replace with icon
+                htmlStr = htmlStr.replace(alertType, iconMap[alertType]);
                 $(this).html(htmlStr);
 
                 // add class
-                $(this).addClass(classMap[key]);
+                $(this).addClass(classMap[alertType]);
             }
         }
       })
