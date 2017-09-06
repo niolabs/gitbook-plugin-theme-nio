@@ -20,6 +20,10 @@
   height: 20px;
   margin: 0.75em 0;
   vertical-align: middle;
+  display: none;
+}
+.header__logo--show {
+  display: block;
 }
 @media (min-width: 1200px) {
   .header__logo {
