@@ -220,6 +220,11 @@ $border-radius: 7px;
   sup {
     font-size: 11px;
   }
+  table {
+    th {
+      text-align: left;
+    }
+  }
 }
 
 .label {

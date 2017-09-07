@@ -48,3 +48,32 @@ The tag
 ```
 
 Will display the current year.
+
+## Alerts
+
+Sample alerts:
+
+### Info
+
+> **[info] Info Title**
+>
+> A good place for hint and information.
+
+### Warning
+
+> **[warning] Warning Title**
+>
+> Put your curve ball or warning here. Hazard.
+
+### Danger
+
+> **[danger] Danger Title**
+>
+> Add a red flag here. Contains an example of what not to do.
+
+
+### success
+
+> **[success] Success Title**
+>
+> Add positive, success, or affirmative information here.
