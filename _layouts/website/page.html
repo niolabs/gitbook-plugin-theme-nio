@@ -1,5 +1,12 @@
 {% extends template.self %}
 
+{% block head %}
+
+  {{ super () }}
+
+  {% include "./_analytics.html" %}
+{% endblock %}
+
 {% block body %}
   {% include "./_header.html" %}
 
