@@ -7,7 +7,6 @@ require(["gitbook"], function(gitbook) {
       // allow dynamic active location in the header
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
       $(`#nav__list--${activeLocation}`).addClass('active');
-      $(`#${activeLocation}-logo`).addClass('header__logo--show');
 
       // custom search bar placeholder text
       $('#book-search-input input').attr('placeholder', 'search');
