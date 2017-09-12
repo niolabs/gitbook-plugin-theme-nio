@@ -7,11 +7,11 @@ This plugin will give your gitbooks niolabs-styling.
 
 Add the plugin to your book.json file.
 
-You point the plugin to the nioinnovation GitHub repo since `theme-nio` is not currently published to npm:
+You point the plugin to the niolabs GitHub repo since `theme-nio` is not currently published to npm:
 
 ```json
 "plugins": [
-    "theme-nio@git://github.com/nioinnovation/gitbook-plugin-theme-nio.git"
+    "theme-nio@git://github.com/niolabs/gitbook-plugin-theme-nio.git"
   ]
 ```
 

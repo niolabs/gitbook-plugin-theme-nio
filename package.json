@@ -6,10 +6,10 @@
     "engines": {
         "gitbook": ">3.0.0"
     },
-    "homepage": "https://github.com/nioinnovation/gitbook-plugin-theme-nio",
+    "homepage": "https://github.com/niolabs/gitbook-plugin-theme-nio",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nioinnovation/gitbook-plugin-theme-nio.git"
+        "url": "https://github.com/niolabs/gitbook-plugin-theme-nio.git"
     },
     "license": "Apache 2",
     "scripts": {
