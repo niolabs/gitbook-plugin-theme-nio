@@ -58,6 +58,15 @@ $border-radius: 7px;
   display: none;
 }
 
+
+.accordion {
+  max-height: 1000px;
+}
+
+.accordionClose {
+  max-height: 32px;
+}
+
 .page-toc {
   margin-bottom: 2rem;
   margin-left: 2.5rem;
