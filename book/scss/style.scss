@@ -21,28 +21,28 @@ $border-radius: 7px;
   &.info {
     background: rgba($palette-primary, 0.15);
     border-color: $palette-primary;
-    strong {
+    p:first-of-type {
       color: $palette-primary;
     }
   }
   &.warning {
     background: rgba($palette-warning, 0.18);
     border-color: $palette-warning;
-    strong {
+    p:first-of-type {
       color: $palette-warning;
     }
   }
   &.danger {
     background: rgba($palette-danger, 0.1);
     border-color: $palette-danger;
-    strong {
+    p:first-of-type {
       color: $palette-danger;
     }
   }
   &.success {
     background: rgba($palette-affirmative, 0.15);
     border-color: $palette-affirmative;
-    strong {
+    p:first-of-type {
       color: $palette-affirmative;
     }
   }
@@ -50,8 +50,12 @@ $border-radius: 7px;
 
 .page-inner {
   @media screen and (min-width: 1210px) {
-    margin-left: 60px;
+    margin-left: 90px;
   }
+}
+
+.navigation {
+  display: none;
 }
 
 .page-toc {
@@ -223,6 +227,28 @@ $border-radius: 7px;
   table {
     th {
       text-align: left;
+    }
+  }
+  ul {
+    li {
+      li {
+        list-style: disc;
+      }
+    }
+  }
+  ol {
+    li {
+      ul {
+        li {
+          list-style: disc;
+        }
+      }
+      li {
+        list-style: lower-latin;
+        li {
+          list-style: lower-roman;
+        }
+      }
     }
   }
 }
