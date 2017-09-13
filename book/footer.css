@@ -34,30 +34,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.primary-nio-footer footer .links .contact-info .logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-bottom: 1.75em;
-}
-.primary-nio-footer footer .links .contact-info .logos .social-icon {
-  margin-right: 0.5em;
-}
-.primary-nio-footer footer .links .contact-info .logos a,
-.primary-nio-footer footer .links .contact-info .logos a:visited {
-  color: #566265;
-}
-.primary-nio-footer footer .links .contact-info .logos a:hover,
-.primary-nio-footer footer .links .contact-info .logos a:active {
-  color: #3CAFDA;
-}
-.primary-nio-footer footer .links .contact-info p {
-  line-height: 2em;
-  margin-top: 2em;
-}
 .primary-nio-footer footer .copyright {
   font-size: 0.9em;
   line-height: 1.75em;
@@ -107,6 +83,39 @@
 .footer__container .sub-menu {
   padding-top: 1em;
 }
+.footer__contact {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 1200px) {
+  .footer__contact {
+    width: 33.33333333%;
+  }
+}
+.footer__contact .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 1.75em;
+}
+.footer__contact .logos .social-icon {
+  margin-right: 0.5em;
+}
+.footer__contact .logos a,
+.footer__contact .logos a:visited {
+  color: #566265;
+}
+.footer__contact .logos a:hover,
+.footer__contact .logos a:active {
+  color: #3CAFDA;
+}
+.footer__contact p {
+  line-height: 2em;
+  margin-top: 2em;
+}
 .footer__logo {
   width: 120px;
   height: 3em;
@@ -121,6 +130,15 @@
 }
 .logo--niolabs {
   background-image: url('/img/logos/niolabs_light.svg');
+}
+.footer__menu {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 1200px) {
+  .footer__menu {
+    width: 66.66666667%;
+  }
 }
 #mce-EMAIL {
   background-color: #354042;
