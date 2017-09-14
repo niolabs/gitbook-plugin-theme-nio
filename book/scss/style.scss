@@ -58,6 +58,14 @@ $border-radius: 7px;
   display: none;
 }
 
+.book-header {
+  a.btn {
+    color: $palette-primary;
+    &:hover {
+      color: $palette-primary;
+    }
+  }
+}
 
 .accordion {
   max-height: 1000px;
