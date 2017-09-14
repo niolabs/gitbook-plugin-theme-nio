@@ -100,6 +100,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   margin-bottom: 1.75em;
+  flex-wrap: wrap;
 }
 .footer__contact .logos .social-icon {
   margin-right: 0.5em;
