@@ -69,6 +69,19 @@ $border-radius: 7px;
 
 .accordion {
   max-height: 1000px;
+  .accordionButton {
+    background-color: $palette-slate;
+    .accordionTitle {
+      color: white;
+      strong {
+        font-weight: 500;
+      }
+    }
+    .accordionSpinner {
+      border-left-color: white;
+      border-top-color: white;
+    }
+  }
 }
 
 .accordionClose {
