@@ -68,9 +68,15 @@ $border-radius: 7px;
 }
 
 .accordion {
-  max-height: 1000px;
+  max-height: 1050px;
+  .accordionContent {
+    max-height: 1000px;
+  }
   .accordionButton {
     background-color: $palette-slate;
+    &:hover {
+      background-color: $palette-zinc;
+    }
     .accordionTitle {
       color: white;
       strong {
