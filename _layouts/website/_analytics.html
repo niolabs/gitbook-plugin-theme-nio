@@ -2,9 +2,10 @@
 {% if config.pluginsConfig['theme-nio']['ga-code'] %}
 <script>
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('require', 'linker');
-  ga('create', '{{ config.pluginsConfig['theme-nio']['ga-code'] }}', 'auto', {'allowLinker': true});
-  ga('linker:autoLink', ['n.io', 'niolabs.com']);
+   ga('create', '{{ config.pluginsConfig['theme-nio']['ga-code'] }}', 'auto', {'allowLinker': true});
+   ga('require', 'linkid');
+   ga('require', 'linker');
+   ga('linker:autoLink', ['n.io', 'niolabs.com']);
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 {% endif %}
