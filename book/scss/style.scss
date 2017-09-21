@@ -49,16 +49,24 @@ $border-radius: 7px;
 }
 
 .page-inner {
+  font: normal 400 16px / 1.6 Lato, sans serif;
+  min-height: 60vh;
   @media screen and (min-width: 1210px) {
     margin-left: 90px;
   }
 }
 
+// we are not using these page navigation arrows
 .navigation {
   display: none;
+  &:hover {
+    color: $palette-slate;
+  }
 }
 
+// internal page toolbar/header
 .book-header {
+  font: normal 400 16px / 1.6 Lato, sans serif;
   a.btn {
     color: $palette-primary;
     &:hover {
@@ -67,59 +75,7 @@ $border-radius: 7px;
   }
 }
 
-.accordion {
-  max-height: 1050px;
-  .accordionContent {
-    max-height: 1000px;
-    @media print { max-height: unset; }
-  }
-  .accordionButton {
-    background-color: $palette-slate;
-    &:hover {
-      background-color: $palette-zinc;
-    }
-    .accordionTitle {
-      color: white;
-      strong {
-        font-weight: 500;
-      }
-    }
-    .accordionSpinner {
-      border-left-color: white;
-      border-top-color: white;
-    }
-  }
-}
-
-.accordionClose {
-  max-height: 32px;
-  @media print { max-height: unset; }
-}
-
-.page-toc {
-  margin-bottom: 2rem;
-  margin-left: 2.5rem;
-  max-width: 280px;
-  border-radius: $border-radius;
-  background-color: white;
-  color: $palette-zinc;
-}
-
-.back-to-top {
-  background: rgba($palette-alert, 0.5);
-  &:hover {
-    background: rgba($palette-zinc, 0.5);
-  }
-}
-
-.navigation:hover {
-  color: $palette-slate;
-}
-
-.book-header {
-  font: normal 400 16px / 1.6 Lato, sans serif;
-}
-
+// custom active styles on sidebar
 .book-summary {
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
@@ -206,6 +162,7 @@ $border-radius: 7px;
   text-transform: lowercase;
 }
 
+// add nio css theme styles
 .markdown-section {
   color: $palette-black;
   h1 {
@@ -304,31 +261,7 @@ $border-radius: 7px;
   font-weight: 600;
 }
 
-#book-search-input {
-  padding: 2.5rem;
-  input {
-    @extend %nio-text-input;
-    @extend %nio-text-input--singleline;
-    padding: 2rem;
-    height: 45px;
-    &:hover {
-      @extend %nio-text-input;
-      @extend %nio-text-input--singleline;
-      padding: 2rem;
-      height: 45px;
-    }
-    &:focus {
-      padding: 2rem;
-      height: 45px;
-    }
-  }
-}
-
-.page-inner {
-  font: normal 400 16px / 1.6 Lato, sans serif;
-  min-height: 60vh;
-}
-
+// style search results pages
 #book-search-results {
   .search-results {
     h1.search-results-title {
@@ -355,6 +288,7 @@ $border-radius: 7px;
   }
 }
 
+// style circle-background icons in either default sharing plugin or toolbar plugin
 .fa.circle-background {
   &::before {
     height: 2.3rem;
@@ -369,5 +303,76 @@ $border-radius: 7px;
     &::before {
       background-color: $palette-primary;
     }
+  }
+}
+
+// STYLES FOR PLUGINS
+
+// style default search plugin
+#book-search-input {
+  padding: 2.5rem;
+  input {
+    @extend %nio-text-input;
+    @extend %nio-text-input--singleline;
+    padding: 2rem;
+    height: 45px;
+    &:hover {
+      @extend %nio-text-input;
+      @extend %nio-text-input--singleline;
+      padding: 2rem;
+      height: 45px;
+    }
+    &:focus {
+      padding: 2rem;
+      height: 45px;
+    }
+  }
+}
+
+// accordion plugin styles
+.accordion {
+  max-height: 1050px;
+  .accordionContent {
+    max-height: 1000px;
+    @media print { max-height: unset; }
+  }
+  .accordionButton {
+    background-color: $palette-slate;
+    &:hover {
+      background-color: $palette-zinc;
+    }
+    .accordionTitle {
+      color: white;
+      strong {
+        font-weight: 500;
+      }
+    }
+    .accordionSpinner {
+      border-left-color: white;
+      border-top-color: white;
+    }
+  }
+}
+
+.accordionClose {
+  max-height: 32px;
+  @media print { max-height: unset; }
+}
+
+// currently not using the page-toc plugin
+.page-toc {
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
+  max-width: 280px;
+  border-radius: $border-radius;
+  background-color: white;
+  color: $palette-zinc;
+}
+
+// back-to-top plugin styles
+.back-to-top {
+  background: rgba($palette-alert, 0.5);
+  &:hover {
+    background: rgba($palette-zinc, 0.5);
   }
 }
