@@ -31,7 +31,7 @@ module.exports = {
             "nio.js"
         ],
         css: [
-            "style.css", "nio.bem.css", "nio.icons.css", "header.css", "footer.css"
+            "nio.bem.css", "nio.icons.css", "header.css", "footer.css", "style.css"
         ],
         html: {
             "html:start": function() {
@@ -56,7 +56,7 @@ module.exports = {
             "nio.js"
         ],
         css: [
-            "style.css"
+            "style.css", "print.css"
         ],
         html: {
             "html:start": function() {
