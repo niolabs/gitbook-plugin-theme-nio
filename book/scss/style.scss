@@ -4,15 +4,6 @@
 
 $border-radius: 7px;
 
-.book {
-  min-height: 100vh;
-  height: auto;
-}
-.book-body,
-.book-body .body-inner {
-  position:relative;
-}
-
 .markdown-section, body {
   font: normal 400 16px / 1.6 Lato, sans serif;
   -ms-overflow-style: none;
