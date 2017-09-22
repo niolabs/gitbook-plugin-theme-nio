@@ -158,10 +158,6 @@ $border-radius: 7px;
   }
 }
 
-.summary {
-  text-transform: lowercase;
-}
-
 // add nio css theme styles
 .markdown-section {
   color: $palette-black;
@@ -240,16 +236,13 @@ $border-radius: 7px;
     }
   }
   ol {
+    ul {
+      list-style: disc;
+    }
     li {
       ul {
         li {
           list-style: disc;
-        }
-      }
-      li {
-        list-style: lower-latin;
-        li {
-          list-style: lower-roman;
         }
       }
     }
