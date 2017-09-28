@@ -240,9 +240,21 @@ $border-radius: 7px;
       list-style: disc;
     }
     li {
+      ol {
+        li {
+          list-style: lower-alpha;
+        }
+      }
+    }
+    li {
       ul {
         li {
           list-style: disc;
+        }
+        ol {
+          li {
+            list-style: lower-alpha;
+          }
         }
       }
     }
