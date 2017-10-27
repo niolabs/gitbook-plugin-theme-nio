@@ -73,6 +73,9 @@ $border-radius: 7px;
       color: $palette-primary;
     }
   }
+  h1 {
+    visibility: hidden;
+  }
 }
 
 // custom active styles on sidebar
