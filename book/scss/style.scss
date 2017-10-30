@@ -73,6 +73,9 @@ $border-radius: 7px;
       color: $palette-primary;
     }
   }
+  h1 {
+    visibility: hidden;
+  }
 }
 
 // custom active styles on sidebar
@@ -106,12 +109,29 @@ $border-radius: 7px;
         &::after {
           content: '';
           position: absolute;
-          height: 3.5rem;
-          width: 5px;
-          border-radius: 3px;
+          top: 50%;
+          right: 0%;
+          transform: translate(50%, -50%);
           background-color: $palette-primary;
-          top: 4px;
-          left: 0;
+          border-radius: 0.5rem;
+          height: 3.5rem;
+          width: 0.8rem;
+          transition:
+            width 33ms ease-out,
+            height 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
+      &.active.animating > a {
+        &::after{
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0%;
+          transform: translate(50%, -50%);
+          background-color: $palette-primary;
+          border-radius: 0.5rem;
+          width: 0;
+          height: 0;
         }
       }
       a {

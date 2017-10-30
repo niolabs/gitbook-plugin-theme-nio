@@ -34,6 +34,16 @@ require(["gitbook"], function(gitbook) {
         $('ul.summary > li').removeClass('animating');
       }, 50);
 
+      $('ul.summary > li.chapter.active').addClass('animating');
+      setTimeout(function() {
+        $('ul.summary > li.chapter.active').removeClass('animating');
+      }, 50);
+
+      // replace header hamburger icon with chevrons
+      $('.js-toolbar-action > .fa').removeClass('fa-align-justify');
+      $('.js-toolbar-action > .fa').addClass('fa-chevron-left');
+      $('.js-toolbar-action > .fa').append('<span class="fa-chevron-right"/>');
+
       // add class to blockquote according to key
       var blkquotes = $('blockquote');
       var classMap = {
