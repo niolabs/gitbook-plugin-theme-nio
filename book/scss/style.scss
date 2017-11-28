@@ -64,24 +64,46 @@ $border-radius: 7px;
   }
 }
 
-// internal page toolbar/header
+// internal page toolbar/header used as mobile TOC toggle
 .book-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $palette-zinc;
   font: normal 400 16px / 1.6 Lato, sans serif;
-  a.btn {
-    color: $palette-primary;
-    &:hover {
-      color: $palette-primary;
-    }
+  @media (min-width: 600px) {
+    display: none;
   }
   h1 {
-    visibility: hidden;
+    display: none;
   }
+}
+
+.book > .book-summary {
+  max-height: 0;
+  left: 0;
+  transition: max-height 300ms;
+}
+
+.with-summary > .book-summary {
+  max-height: 600px;
+  overflow-y: scroll;
+  left: 0;
+  transition: max-height 300ms;
+}
+
+.book-body {
+  transition: none;
 }
 
 // custom active styles on sidebar
 .book-summary {
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
+  @media (max-width: 600px) {
+    width: 100%;
+    bottom: 0;
+  }
   ul.summary {
     li.chapter {
       font-size: 18px;
@@ -330,6 +352,13 @@ $border-radius: 7px;
     &::before {
       background-color: $palette-primary;
     }
+  }
+}
+
+.fa.fa-chevron-up {
+  color: $palette-zinc;
+  &--rotate180 {
+    transform: rotate(180deg);
   }
 }
 

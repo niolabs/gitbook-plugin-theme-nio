@@ -1,8 +1,12 @@
 require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function(event) {
-
       // google analytics, track changes inside docs
       ga('send', 'pageview');
+
+      // scroll to top of header on page change
+      $(document).ready(function(){
+        $(window).scrollTop(0);
+      });
 
       // allow dynamic active location in the header
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
@@ -28,7 +32,7 @@ require(["gitbook"], function(gitbook) {
      		$('ul.summary li[data-level="'+parent+'"]').addClass('active--chapter');
      	}
 
-      // this gets the sidebar animation working
+      // this gets the sidebar expand TOC animation working
       $('ul.summary > li.active').addClass('animating');
       setTimeout(function() {
         $('ul.summary > li').removeClass('animating');
@@ -41,8 +45,23 @@ require(["gitbook"], function(gitbook) {
 
       // replace header hamburger icon with chevrons
       $('.js-toolbar-action > .fa').removeClass('fa-align-justify');
-      $('.js-toolbar-action > .fa').addClass('fa-chevron-left');
-      $('.js-toolbar-action > .fa').append('<span class="fa-chevron-right"/>');
+      $('.js-toolbar-action > .fa').addClass('fa-chevron-up');
+      // remove unwanted page-header elements that are added on each page change
+      if ($('.js-toolbar-action > .fa').length > 1) {
+        $('.js-toolbar-action > .fa')[0].remove();
+      }
+      if ($('.book-header').length > 1) {
+        $('.book-header')[1].remove();
+      }
+      // rotate chevron on click
+      $('.js-toolbar-action > .fa').click( function() {
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180')
+        $('.book').addClass('book-animating');
+        setTimeout(function() {
+          $('.book').removeClass('book-animating');
+        }, 1000);
+
+      });
 
       // add class to blockquote according to key
       var blkquotes = $('blockquote');
@@ -78,5 +97,16 @@ require(["gitbook"], function(gitbook) {
 
     gitbook.events.bind("exercise.submit", function() {
         // do something
+    });
+
+    gitbook.events.bind("start", function() {
+
+        // do things one time only, on load of book
+
+        // attach book-header to header and add custom content
+        $('.header').after($('.book-header'));
+        $( '.js-toolbar-action' ).after( $( '.custom-book-header-content' ));
+
+
     });
 });
