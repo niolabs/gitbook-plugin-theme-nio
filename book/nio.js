@@ -17,6 +17,13 @@ require(["gitbook"], function(gitbook) {
 
       // custom search bar placeholder text
       $('#book-search-input input').attr('placeholder', 'Search');
+      $('#book-search-input input').keypress(function (e) {
+        var key = e.which;
+        if (key === 13)  // the enter key code
+        {
+          $('.js-toolbar-action > .fa').click();
+        }
+      });
 
       // add class to active parent chapter
       // remove active chapter globally
@@ -55,12 +62,8 @@ require(["gitbook"], function(gitbook) {
       }
       // rotate chevron on click
       $('.js-toolbar-action > .fa').click( function() {
-        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180')
-        $('.book').addClass('book-animating');
-        setTimeout(function() {
-          $('.book').removeClass('book-animating');
-        }, 1000);
-
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
+        $('.book-header').toggleClass('toc-open');
       });
 
       // add class to blockquote according to key

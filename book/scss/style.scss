@@ -77,6 +77,9 @@ $border-radius: 7px;
   h1 {
     display: none;
   }
+  &.toc-open {
+    border: none;
+  }
 }
 
 .book > .book-summary {
@@ -326,6 +329,10 @@ $border-radius: 7px;
 .label {
   font-size: 0.85714286rem;
   font-weight: 600;
+}
+
+.custom-book-header-content {
+  color: $palette-black;
 }
 
 // style search results pages
