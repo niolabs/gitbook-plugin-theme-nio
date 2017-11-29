@@ -3,9 +3,11 @@ require(["gitbook"], function(gitbook) {
       // google analytics, track changes inside docs
       ga('send', 'pageview');
 
-      // scroll to top of header on page change
+      // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
         $(window).scrollTop(0);
+        $('.js-toolbar-action > .fa').removeClass('fa-chevron-down--rotate180');
+        $('.book-header').removeClass('toc-open');
       });
 
       // allow dynamic active location in the header
@@ -15,22 +17,17 @@ require(["gitbook"], function(gitbook) {
       // use this to attach footer to any element
       // $( '.body-inner' ).append( $( '.primary-nio-footer' ) );
 
-      // custom search bar clickable icon and placeholder text
+      // custom search bar placeholder text, add clickable icon, and search on return keypress
       $('#book-search-input').append($('<div id="search-icon"></div>'));
       $('#book-search-input input').attr('placeholder', 'Search');
       $('#book-search-input input').keypress(function (e) {
         var key = e.which;
         if (key === 13)  // the enter key code
         {
-          $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
-          $('.book-header').toggleClass('toc-open');
           $('.js-toolbar-action > .fa').click();
         }
       });
       $('#search-icon').click( function() {
-        console.log('clicked');
-        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
-        $('.book-header').toggleClass('toc-open');
         $('.js-toolbar-action > .fa').click();
       });
 
@@ -60,9 +57,9 @@ require(["gitbook"], function(gitbook) {
         $('ul.summary > li.chapter.active').removeClass('animating');
       }, 50);
 
-      // replace header hamburger icon with chevrons
+      // replace header hamburger icon with chevron
       $('.js-toolbar-action > .fa').removeClass('fa-align-justify');
-      $('.js-toolbar-action > .fa').addClass('fa-chevron-up');
+      $('.js-toolbar-action > .fa').addClass('fa-chevron-down');
       // remove unwanted page-header elements that are added on each page change
       if ($('.js-toolbar-action > .fa').length > 1) {
         $('.js-toolbar-action > .fa')[0].remove();
@@ -72,7 +69,7 @@ require(["gitbook"], function(gitbook) {
       }
       // rotate chevron on click
       $('.js-toolbar-action > .fa').click( function() {
-        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-down--rotate180');
         $('.book-header').toggleClass('toc-open');
       });
 
@@ -119,8 +116,6 @@ require(["gitbook"], function(gitbook) {
         // attach book-header to header and add custom content
         $('.header').after($('.book-header'));
         $('.js-toolbar-action').after( $('.custom-book-header-content'));
-        $('#book-search-input').append($('#search-icon'));
-
 
     });
 });

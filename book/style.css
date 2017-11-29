@@ -326,9 +326,9 @@
 .fa.circle-background:hover::before {
   background-color: #3CAFDA; }
 
-.fa.fa-chevron-up {
+.fa.fa-chevron-down {
   color: #9DAAB1; }
-  .fa.fa-chevron-up--rotate180 {
+  .fa.fa-chevron-down--rotate180 {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
 
