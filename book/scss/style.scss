@@ -64,17 +64,51 @@ $border-radius: 7px;
   }
 }
 
-// internal page toolbar/header
+// internal page toolbar/header used as mobile TOC toggle
 .book-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $palette-zinc;
   font: normal 400 16px / 1.6 Lato, sans serif;
-  a.btn {
-    color: $palette-primary;
-    &:hover {
-      color: $palette-primary;
-    }
+  @media (min-width: 600px) {
+    display: none;
   }
   h1 {
-    visibility: hidden;
+    display: none;
+  }
+  &.toc-open {
+    border: none;
+  }
+}
+
+.book > .book-summary {
+  max-height: 0;
+  left: 0;
+  transition: max-height 300ms;
+  @media (min-width: 600px) {
+    max-height: unset;
+    transition: none;
+  }
+}
+
+.with-summary > .book-summary {
+  max-height: 600px;
+  overflow-y: scroll;
+  left: 0;
+  transition: max-height 300ms;
+  @media (min-width: 600px) {
+    max-height: unset;
+    transition: none;
+  }
+}
+
+.book-body {
+  transition: none;
+  @media (min-width: 600px) {
+    max-height: unset;
+    transition: unset;
+    left: 300px;
   }
 }
 
@@ -82,19 +116,26 @@ $border-radius: 7px;
 .book-summary {
   font: normal 400 16px / 1.4 Lato, sans serif;
   background: white;
+  @media (max-width: 600px) {
+    width: 100%;
+    bottom: 0;
+  }
   ul.summary {
     li.chapter {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 22.5px;
       &.active,
       &.active--chapter {
-        &.animating ul.articles {
-          max-height: 0;
-        }
-        ul.articles {
-          max-height: 600px;
-          transition: max-height 1000ms;
+        @media (min-width: 600px) {
+          &.animating ul.articles {
+            max-height: 0;
+          }
+          ul.articles {
+            height: unset;
+            max-height: 600px;
+            transition: max-height 1000ms;
+          }
         }
       }
       &.active--chapter > a {
@@ -141,17 +182,19 @@ $border-radius: 7px;
         text-decoration: none;
         position: relative;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         &:hover {
           text-decoration: none;
           color: $palette-black;
         }
       }
       ul.articles {
-        max-height: 0;
         overflow: hidden;
         padding-left: 0;
         transition: max-height 1000ms;
+        @media (min-width: 600px) {
+          max-height: 0;
+        }
         a {
           padding-left: 5rem;
           font-size: 16px;
@@ -288,6 +331,10 @@ $border-radius: 7px;
   font-weight: 600;
 }
 
+.custom-book-header-content {
+  color: $palette-black;
+}
+
 // style search results pages
 #book-search-results {
   .search-results {
@@ -333,27 +380,51 @@ $border-radius: 7px;
   }
 }
 
+.fa.fa-chevron-down {
+  color: $palette-zinc;
+  &--rotate180 {
+    transform: rotate(180deg);
+  }
+}
+
 // STYLES FOR PLUGINS
 
 // style default search plugin
 #book-search-input {
   padding: 2.5rem;
+  height: 10rem;
   input {
     @extend %nio-text-input;
     @extend %nio-text-input--singleline;
     padding: 2rem;
     height: 45px;
+    box-shadow: none;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
       padding: 2rem;
       height: 45px;
+      box-shadow: none;
     }
     &:focus {
       padding: 2rem;
       height: 45px;
+      box-shadow: none;
     }
   }
+}
+
+#search-icon {
+  position: relative;
+  top: -4.5rem;
+  left: 80%;
+  background-image: url(img/search-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
 }
 
 // accordion plugin styles

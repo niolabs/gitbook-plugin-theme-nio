@@ -1,8 +1,14 @@
 require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function(event) {
-
       // google analytics, track changes inside docs
       ga('send', 'pageview');
+
+      // scroll to top of header on page change, initialize TOC as closed
+      $(document).ready(function(){
+        $(window).scrollTop(0);
+        $('.js-toolbar-action > .fa').removeClass('fa-chevron-down--rotate180');
+        $('.book-header').removeClass('toc-open');
+      });
 
       // allow dynamic active location in the header
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
@@ -11,8 +17,20 @@ require(["gitbook"], function(gitbook) {
       // use this to attach footer to any element
       // $( '.body-inner' ).append( $( '.primary-nio-footer' ) );
 
-      // custom search bar placeholder text
+      // custom search bar placeholder text, add clickable icon, and search on return keypress
+      $('#book-search-input').append($('<div id="search-icon"></div>'));
       $('#book-search-input input').attr('placeholder', 'Search');
+      $('#book-search-input input').keypress(function (e) {
+        var key = e.which;
+        if (key === 13)  // the enter key code
+        {
+          $('.js-toolbar-action > .fa').click();
+        }
+      });
+      $('#search-icon').click( function() {
+        $('.js-toolbar-action > .fa').click();
+      });
+
 
       // add class to active parent chapter
       // remove active chapter globally
@@ -28,7 +46,7 @@ require(["gitbook"], function(gitbook) {
      		$('ul.summary li[data-level="'+parent+'"]').addClass('active--chapter');
      	}
 
-      // this gets the sidebar animation working
+      // this gets the sidebar expand TOC animation working
       $('ul.summary > li.active').addClass('animating');
       setTimeout(function() {
         $('ul.summary > li').removeClass('animating');
@@ -39,10 +57,21 @@ require(["gitbook"], function(gitbook) {
         $('ul.summary > li.chapter.active').removeClass('animating');
       }, 50);
 
-      // replace header hamburger icon with chevrons
+      // replace header hamburger icon with chevron
       $('.js-toolbar-action > .fa').removeClass('fa-align-justify');
-      $('.js-toolbar-action > .fa').addClass('fa-chevron-left');
-      $('.js-toolbar-action > .fa').append('<span class="fa-chevron-right"/>');
+      $('.js-toolbar-action > .fa').addClass('fa-chevron-down');
+      // remove unwanted page-header elements that are added on each page change
+      if ($('.js-toolbar-action > .fa').length > 1) {
+        $('.js-toolbar-action > .fa')[0].remove();
+      }
+      if ($('.book-header').length > 1) {
+        $('.book-header')[1].remove();
+      }
+      // rotate chevron on click
+      $('.js-toolbar-action > .fa').click( function() {
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-down--rotate180');
+        $('.book-header').toggleClass('toc-open');
+      });
 
       // add class to blockquote according to key
       var blkquotes = $('blockquote');
@@ -78,5 +107,15 @@ require(["gitbook"], function(gitbook) {
 
     gitbook.events.bind("exercise.submit", function() {
         // do something
+    });
+
+    gitbook.events.bind("start", function() {
+
+        // do things one time only, on load of book
+
+        // attach book-header to header and add custom content
+        $('.header').after($('.book-header'));
+        $('.js-toolbar-action').after( $('.custom-book-header-content'));
+
     });
 });
