@@ -15,15 +15,25 @@ require(["gitbook"], function(gitbook) {
       // use this to attach footer to any element
       // $( '.body-inner' ).append( $( '.primary-nio-footer' ) );
 
-      // custom search bar placeholder text
+      // custom search bar clickable icon and placeholder text
+      $('#book-search-input').append($('<div id="search-icon"></div>'));
       $('#book-search-input input').attr('placeholder', 'Search');
       $('#book-search-input input').keypress(function (e) {
         var key = e.which;
         if (key === 13)  // the enter key code
         {
+          $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
+          $('.book-header').toggleClass('toc-open');
           $('.js-toolbar-action > .fa').click();
         }
       });
+      $('#search-icon').click( function() {
+        console.log('clicked');
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-up--rotate180');
+        $('.book-header').toggleClass('toc-open');
+        $('.js-toolbar-action > .fa').click();
+      });
+
 
       // add class to active parent chapter
       // remove active chapter globally
@@ -108,7 +118,8 @@ require(["gitbook"], function(gitbook) {
 
         // attach book-header to header and add custom content
         $('.header').after($('.book-header'));
-        $( '.js-toolbar-action' ).after( $( '.custom-book-header-content' ));
+        $('.js-toolbar-action').after( $('.custom-book-header-content'));
+        $('#book-search-input').append($('#search-icon'));
 
 
     });

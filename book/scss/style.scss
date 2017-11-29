@@ -392,22 +392,39 @@ $border-radius: 7px;
 // style default search plugin
 #book-search-input {
   padding: 2.5rem;
+  height: 10rem;
   input {
     @extend %nio-text-input;
     @extend %nio-text-input--singleline;
     padding: 2rem;
     height: 45px;
+    box-shadow: none;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
       padding: 2rem;
       height: 45px;
+      box-shadow: none;
     }
     &:focus {
       padding: 2rem;
       height: 45px;
+      box-shadow: none;
     }
   }
+}
+
+#search-icon {
+  position: relative;
+  top: -4.5rem;
+  left: 80%;
+  background-image: url(img/search-placeholder.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
 }
 
 // accordion plugin styles
