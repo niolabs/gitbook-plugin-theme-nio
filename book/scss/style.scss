@@ -51,8 +51,9 @@ $border-radius: 7px;
 .page-inner {
   font: normal 400 16px / 1.6 Lato, sans serif;
   min-height: 60vh;
+  padding-top: 5rem;
   @media screen and (min-width: 1210px) {
-    margin-left: 90px;
+    margin-left: 20px;
   }
 }
 
@@ -425,6 +426,7 @@ $border-radius: 7px;
   height: 5rem;
   width: 5rem;
   background-color: transparent;
+  cursor: pointer;
 }
 
 // accordion plugin styles

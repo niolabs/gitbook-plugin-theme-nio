@@ -3,12 +3,24 @@ require(["gitbook"], function(gitbook) {
       // google analytics, track changes inside docs
       ga('send', 'pageview');
 
+      function resetToc() {
+        $('.js-toolbar-action > .fa').removeClass('fa-chevron-down--rotate180');
+        $('.book-header').removeClass('toc-open');
+      };
+
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
         $(window).scrollTop(0);
-        $('.js-toolbar-action > .fa').removeClass('fa-chevron-down--rotate180');
-        $('.book-header').removeClass('toc-open');
+        resetToc();
+        $('.accordion').removeClass('accordionClose');
       });
+
+      // in mobile, force page change when active chapter is clicked
+      if ($(window).width() < 600) {
+        $('.active').click( function(e) {
+          window.location.href = e.target.href;
+        });
+      }
 
       // allow dynamic active location in the header
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
@@ -30,7 +42,6 @@ require(["gitbook"], function(gitbook) {
       $('#search-icon').click( function() {
         $('.js-toolbar-action > .fa').click();
       });
-
 
       // add class to active parent chapter
       // remove active chapter globally
@@ -69,8 +80,8 @@ require(["gitbook"], function(gitbook) {
       }
       // rotate chevron on click
       $('.js-toolbar-action > .fa').click( function() {
-        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-down--rotate180');
         $('.book-header').toggleClass('toc-open');
+        $('.js-toolbar-action > .fa').toggleClass('fa-chevron-down--rotate180');
       });
 
       // add class to blockquote according to key
@@ -80,14 +91,14 @@ require(["gitbook"], function(gitbook) {
           '[warning]': 'warning',
           '[danger]': 'danger',
           '[success]': 'success'
-      }
+      };
 
       var iconMap = {
           '[info]': '<i class="fa fa-info-circle"></i>',
           '[warning]': '<i class="fa fa-exclamation-circle"></i>',
           '[danger]': '<i class="fa fa-ban"></i>',
           '[success]': '<i class="fa fa-check-circle"></i>'
-      }
+      };
 
       blkquotes.each(function() {
         for (alertType in classMap) {
@@ -113,6 +124,7 @@ require(["gitbook"], function(gitbook) {
 
         // do things one time only, on load of book
 
+        // repurpose book-header as mobile TOC
         // attach book-header to header and add custom content
         $('.header').after($('.book-header'));
         $('.js-toolbar-action').after( $('.custom-book-header-content'));
