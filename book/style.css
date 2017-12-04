@@ -337,17 +337,17 @@
   padding: 2.5rem;
   height: 10rem; }
   #book-search-input input {
-    padding: 2rem;
+    padding: 15px;
     height: 45px;
     -webkit-box-shadow: none;
             box-shadow: none; }
     #book-search-input input:hover {
-      padding: 2rem;
+      padding: 15px;
       height: 45px;
       -webkit-box-shadow: none;
               box-shadow: none; }
     #book-search-input input:focus {
-      padding: 2rem;
+      padding: 15px;
       height: 45px;
       -webkit-box-shadow: none;
               box-shadow: none; }
