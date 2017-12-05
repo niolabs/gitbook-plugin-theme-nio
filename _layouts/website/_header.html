@@ -2,11 +2,10 @@
   <div class="header__container">
     <!-- Logo & Mobile Notifications and Navigation Toggle -->
     <a href="https://app.n.io">
-      <img src="data:image/svg+xml,%3Csvg id='logo_light' data-name='logo light' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 927 452'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff%3B%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Enio_logo_light%3C/title%3E%3Cpath class='cls-1' d='M166%2C357.37V244.6c0-32.78-17.92-57.7-52-57.7-32.78%2C0-55.08%2C27.54-55.08%2C60.32V357.37H6V141.44H53.64l3.5%2C29.28C79%2C149.31%2C100.85%2C138.38%2C128%2C138.38c50.7%2C0%2C91.35%2C38%2C91.35%2C105.78V357.37Z'/%3E%3Cpath class='cls-1' d='M321.74%2C81.12c0%2C41.52-62.94%2C41.52-62.94%2C0S321.74%2C39.59%2C321.74%2C81.12ZM263.61%2C141V357.37h53.32V141Z'/%3E%3Cpath class='cls-1' d='M584%2C249.84c0%2C62.07-42.4%2C112.33-112.33%2C112.33s-111.9-50.26-111.9-112.33c0-61.63%2C42.83-112.33%2C111.46-112.33S584%2C188.21%2C584%2C249.84Zm-170.9%2C0c0%2C32.79%2C19.67%2C63.38%2C58.57%2C63.38s58.57-30.59%2C58.57-63.38c0-32.34-22.73-63.81-58.57-63.81C433.2%2C186%2C413.1%2C217.49%2C413.1%2C249.84Z'/%3E%3C/svg%3E" class="header__logo" />
+      <img src="data:image/svg+xml,%3Csvg height='60px' id='logo_light' data-name='logo light' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 927 452'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff%3B%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Enio_logo_light%3C/title%3E%3Cpath class='cls-1' d='M166%2C357.37V244.6c0-32.78-17.92-57.7-52-57.7-32.78%2C0-55.08%2C27.54-55.08%2C60.32V357.37H6V141.44H53.64l3.5%2C29.28C79%2C149.31%2C100.85%2C138.38%2C128%2C138.38c50.7%2C0%2C91.35%2C38%2C91.35%2C105.78V357.37Z'/%3E%3Cpath class='cls-1' d='M321.74%2C81.12c0%2C41.52-62.94%2C41.52-62.94%2C0S321.74%2C39.59%2C321.74%2C81.12ZM263.61%2C141V357.37h53.32V141Z'/%3E%3Cpath class='cls-1' d='M584%2C249.84c0%2C62.07-42.4%2C112.33-112.33%2C112.33s-111.9-50.26-111.9-112.33c0-61.63%2C42.83-112.33%2C111.46-112.33S584%2C188.21%2C584%2C249.84Zm-170.9%2C0c0%2C32.79%2C19.67%2C63.38%2C58.57%2C63.38s58.57-30.59%2C58.57-63.38c0-32.34-22.73-63.81-58.57-63.81C433.2%2C186%2C413.1%2C217.49%2C413.1%2C249.84Z'/%3E%3C/svg%3E" class="header__logo" height="60px"/>
     </a>
-    <!-- Notifications—go find .header__notifications in the css and change it to visibility:hidden all the way to header__toggle -->
-    <div class="header__notifications">
-    </div>
+
+    <!-- Mobile Notifications: only used in portal-->
 
     <input class="header__toggle" id="header__toggle" type="checkbox" />
     <label for="header__toggle" class="header__toggle--label"></label>
@@ -40,8 +39,8 @@
             <li class="sub-nav__item"><a href="https://app.n.io/support/contact" class="sub-nav__item--anchor">Contact us</a></li>
           </ul>
         </li>
-        <!-- Notifications—go find .nav__list--item.nav__list--item--notifications and make it visibility:hidden all the way to .nav__list--item--settings .nio-profile -->
-        <li class="nav__list--item nav__list--item--notifications">
+        <!-- Notifications—this element is only used in the portal, so no content and a static width to match the portal spacing -->
+        <li class="nav__list--item nav__list--item--notifications" style="width: 62px;">
         </li>
         <!-- Account Settings -->
         <li class="nav__list--item nav__list--item--settings">
