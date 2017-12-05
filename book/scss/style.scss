@@ -397,18 +397,18 @@ $border-radius: 7px;
   input {
     @extend %nio-text-input;
     @extend %nio-text-input--singleline;
-    padding: 2rem;
+    padding: 10px 15px;
     height: 45px;
     box-shadow: none;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
-      padding: 2rem;
+      padding: 10px 15px;
       height: 45px;
       box-shadow: none;
     }
     &:focus {
-      padding: 2rem;
+      padding: 10px 15px;
       height: 45px;
       box-shadow: none;
     }

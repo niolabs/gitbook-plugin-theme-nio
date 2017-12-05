@@ -15,6 +15,10 @@ require(["gitbook"], function(gitbook) {
         $('.accordion').removeClass('accordionClose');
       });
 
+      // this is a workaround so that the pubkeeper docs don't open in a new link
+      // remove this as soon as the pubkeeper docs repo can be public and be part of an {%include %} block
+      $('a[href="https://docs.pubkeeper.com"]').removeAttr('target');
+
       // in mobile, force page change when active chapter is clicked
       if ($(window).width() < 600) {
         $('.active').click( function(e) {
