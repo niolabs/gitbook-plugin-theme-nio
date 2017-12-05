@@ -37,7 +37,6 @@
   line-height: normal;
   font-size: 28px;
   padding-right: 0.4em;
-  visibility: hidden;
 }
 @media (min-width: 1200px) {
   .header__notifications {
@@ -200,13 +199,10 @@
 .nav__list--item.nav__list--item--notifications {
   color: #9DAAB1;
   padding-right: 0.4em;
-  visibility: hidden;
 }
 .nav__list--item.nav__list--item--notifications i {
   font-size: 24px;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
 }
 .nav__list--item.nav__list--item--notifications .notification-connector:after {
   content: '';
@@ -441,7 +437,7 @@
   text-decoration: none;
 }
 .sub-nav__item__organization p {
-  magrin: 0;
+  margin: 0;
   text-overflow: ellipsis;
   max-width: 80px;
   overflow-x: hidden;
