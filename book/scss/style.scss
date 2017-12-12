@@ -227,11 +227,14 @@ $border-radius: 7px;
   color: $palette-black;
   h1 {
     @extend %nio-h1;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 500;
     color: $palette-primary;
     line-height: 55px;
     margin-bottom: 1.7rem;
+    @media screen and (min-width: 600px) {
+      font-size: 48px;
+    }
   }
   h2 {
     @extend %nio-h2;
@@ -280,6 +283,10 @@ $border-radius: 7px;
   }
   sup {
     font-size: 11px;
+  }
+  .scrolling-wrapper {
+    display: block;
+    overflow: auto;
   }
   table {
     thead {
@@ -433,6 +440,7 @@ $border-radius: 7px;
 .accordion {
   max-height: 1050px;
   .accordionContent {
+    text-align: center;
     max-height: 1000px;
     @media print { max-height: unset; }
   }

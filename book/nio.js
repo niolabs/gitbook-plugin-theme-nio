@@ -13,6 +13,7 @@ require(["gitbook"], function(gitbook) {
         $(window).scrollTop(0);
         resetToc();
         $('.accordion').removeClass('accordionClose');
+        $('table').wrap('<div class="scrolling-wrapper"></div>');
         // in mobile, force page change when active chapter is clicked
         if ($(window).width() < 600) {
           $('.active').click( function(e) {
@@ -20,10 +21,6 @@ require(["gitbook"], function(gitbook) {
           });
         }
       });
-
-      // this is a workaround so that the pubkeeper docs don't open in a new link
-      // remove this as soon as the pubkeeper docs repo can be public and be part of an {%include %} block
-      $('a[href="https://docs.pubkeeper.com"]').removeAttr('target');
 
       // allow dynamic active location in the header
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
