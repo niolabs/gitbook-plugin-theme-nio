@@ -202,8 +202,10 @@ $border-radius: 7px;
           font-weight: 400;
         }
         li.chapter {
+          line-height: 1;
           ul.articles {
             li.chapter {
+              line-height: 1;
               a {
                 padding-left: 7rem;
               }
