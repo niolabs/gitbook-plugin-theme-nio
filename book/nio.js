@@ -1,7 +1,5 @@
 require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function(event) {
-      // google analytics, track changes inside docs
-      ga('send', 'pageview');
 
       function resetToc() {
         $('.js-toolbar-action > .fa').removeClass('fa-chevron-down--rotate180');
