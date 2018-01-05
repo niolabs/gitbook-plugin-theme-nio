@@ -26,9 +26,6 @@ require(["gitbook"], function(gitbook) {
       var activeLocation = gitbook.state.config.pluginsConfig['theme-nio']['active-location'];
       $(`#nav__list--${activeLocation}`).addClass('active');
 
-      // use this to attach footer to any element
-      // $( '.body-inner' ).append( $( '.primary-nio-footer' ) );
-
       // custom search bar placeholder text, add clickable icon, and search on return keypress
       $('#book-search-input').append($('<div id="search-icon"></div>'));
       $('#book-search-input input').attr('placeholder', 'Search');
