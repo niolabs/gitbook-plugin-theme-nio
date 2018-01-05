@@ -4,10 +4,11 @@
 
   {{ super () }}
 
-  {% include "./_analytics.html" %}
+  {% include "./_gtmhead.html" %}
 {% endblock %}
 
 {% block body %}
+  {% include "./_gtmbody.html" %}
   {% include "./_header.html" %}
 
   {{ super() }}
