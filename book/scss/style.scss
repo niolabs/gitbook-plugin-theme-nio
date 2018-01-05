@@ -57,6 +57,10 @@ $border-radius: 7px;
   }
 }
 
+.page-wrapper {
+  min-height: 100vh;
+}
+
 // we are not using these page navigation arrows
 .navigation {
   display: none;
@@ -202,10 +206,10 @@ $border-radius: 7px;
           font-weight: 400;
         }
         li.chapter {
-          line-height: 1;
+          line-height: 12px;
           ul.articles {
             li.chapter {
-              line-height: 1;
+              line-height: 10px;
               a {
                 padding-left: 7rem;
               }
