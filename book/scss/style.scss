@@ -76,6 +76,7 @@ $border-radius: 7px;
   justify-content: space-between;
   border-bottom: 1px solid $palette-zinc;
   font: normal 400 16px / 1.6 Lato, sans serif;
+  margin-top: 60px;
   @media (min-width: 600px) {
     display: none;
   }
@@ -84,6 +85,14 @@ $border-radius: 7px;
   }
   &.toc-open {
     border: none;
+  }
+}
+
+.book {
+  height: auto;
+  width: auto;
+  @media (min-width: 600px) {
+    margin-top: 72px;
   }
 }
 
@@ -109,12 +118,18 @@ $border-radius: 7px;
 }
 
 .book-body {
+  position: static;
   transition: none;
   @media (min-width: 600px) {
     max-height: unset;
     transition: unset;
-    left: 300px;
+    margin-left: 300px;
   }
+
+  .body-inner {
+    position: static;
+  }
+
 }
 
 // custom active styles on sidebar
