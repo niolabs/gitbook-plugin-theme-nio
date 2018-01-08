@@ -86,7 +86,11 @@ $border-radius: 7px;
     border: none;
   }
 }
-
+@media (min-width: 600px) {
+  .book {
+    height: unset;
+  }
+}
 .book > .book-summary {
   max-height: 0;
   left: 0;
@@ -108,12 +112,19 @@ $border-radius: 7px;
   }
 }
 
-.book-body {
+.book-body,
+.book.with-summary > .book-body {
   transition: none;
   @media (min-width: 600px) {
+    left: 0;
+    position: relative;
+    width: 100%;
     max-height: unset;
     transition: unset;
-    left: 300px;
+    margin-left: 300px;
+    .body-inner {
+      position: relative;
+    }
   }
 }
 
