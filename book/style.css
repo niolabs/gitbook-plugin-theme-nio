@@ -155,7 +155,7 @@
     .book.with-summary > .book-body {
       left: 0;
       position: relative;
-      width: 100%;
+      width: auto;
       max-height: unset;
       -webkit-transition: unset;
       transition: unset;
