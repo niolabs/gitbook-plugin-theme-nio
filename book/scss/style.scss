@@ -242,13 +242,16 @@ $border-radius: 7px;
 // add nio css theme styles
 .markdown-section {
   color: $palette-black;
+  hr {
+    border-top: 1px solid $palette-light!important;
+    margin: 45px 0 25px 0!important;
+    height: 1px!important;
+  }
   h1 {
     @extend %nio-h1;
     font-size: 40px;
     font-weight: 500;
     color: $palette-primary;
-    line-height: 55px;
-    margin-bottom: 1.7rem;
     @media screen and (min-width: 600px) {
       font-size: 48px;
     }
@@ -257,39 +260,56 @@ $border-radius: 7px;
     @extend %nio-h2;
     font-size: 36px;
     font-weight: 300;
-    line-height: 46px;
     color: $palette-primary;
   }
   h3 {
     @extend %nio-h3;
     font-size: 28px;
     font-weight: 400;
-    line-height: 36px;
     color: $palette-primary;
   }
   h4 {
     @extend %nio-h4;
     font-size: 22px;
     font-weight: 400;
-    line-height: 30px;
   }
   h5 {
     @extend %nio-h5;
     font-size: 18px;
     font-weight: 300;
-    line-height: 25px;
   }
   h6 {
     @extend %nio-h6;
     font-size: 14px;
     font-weight: 700;
-    line-height: 28px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    margin: 40px 0;
   }
   a {
     color: $palette-primary;
     &:hover {
       text-decoration: none;
       color: $palette-black;
+    }
+  }
+  a.n-button.n-button--primary {
+    display:inline-block;
+    border: 1px solid $palette-primary;
+    color: $palette-primary;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    min-width: 300px;
+    &:hover {
+      color: #fff;
+      background-color: $palette-primary;
+    }
+    @media (max-width: 600px) {
+      font-size: 0.875rem;
+      min-width: 250px;
     }
   }
   pre {
@@ -501,3 +521,5 @@ $border-radius: 7px;
     background: rgba($palette-zinc, 0.5);
   }
 }
+
+
