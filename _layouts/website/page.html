@@ -5,8 +5,8 @@
   {{ super () }}
 
   {% include "./_gtmhead.html" %}
+  {% include "./_auth0head.html" %}
 
-  <script src="https://cdn.auth0.com/js/auth0/9.0.1/auth0.min.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -18,25 +18,7 @@
 
   {% include "./_footer.html" %}
   {% include "./_quantum.html" %}
-  <script type="text/javascript">
-    var auth0 = new auth0.WebAuth({
-      clientID: 'yhfMmYS07O4Ubo6ljUL6FnluNx0q4IbQ',
-      domain: 'stage-nio.auth0.com',
-      redirectUri: 'http://localhost:4000',
-      responseType: 'code',
-      scope: 'openid%20profile',
-      audience: 'https://stage-nio.auth0.com/api/v2/'
-    });
-    // auth0.crossOriginVerification();
-    auth0.checkSession({}, function(err, authResult) {
-      if (err && err.error === 'login_required') {
-        console.log('not logged in');
-      }
-      else {
-        console.log('logged in!');
-      }
-    })
-  </script>
+  {% include "./_auth0body.html" %}
 
 
 {% endblock %}
