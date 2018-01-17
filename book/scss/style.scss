@@ -91,6 +91,9 @@ $border-radius: 7px;
     height: unset;
   }
 }
+#book-sidebar-container {
+  height: 100vh;
+}
 .book > .book-summary {
   max-height: 0;
   left: 0;
@@ -100,9 +103,9 @@ $border-radius: 7px;
     transition: none;
   }
 }
-body.scrolled {
-  .book > .book-summary {
-    @media (min-width: 600px) {
+@media (min-width: 600px) {
+  body.scrolled {
+    .book > .book-summary {
       position: sticky;
       float: left;
     }
