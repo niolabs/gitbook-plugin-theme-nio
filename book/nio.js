@@ -8,7 +8,6 @@ require(["gitbook"], function(gitbook) {
 
       function bindScrollEvent() {
         const scrollDistance = 50;
-        // Initial check - used if the initial page start is down the page, ie. anchor tags
         $(window).bind('scroll', function() {
           if ($(window).scrollTop() > scrollDistance) {
             $('body').addClass('scrolled');
