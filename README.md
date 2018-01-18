@@ -41,6 +41,7 @@ For variation in styling and sizes, you can use simple html. Include the size, i
 - **right**: float right; top, bottom, and left margins
 - **display**: adds more padding and margin
 - **border**: adds padding and a border with rounded corners
+- **inline**: no padding, no margins, display inline, use for images embedded in text, for example
 
 ### Examples
 

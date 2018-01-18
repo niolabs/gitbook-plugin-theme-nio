@@ -277,6 +277,11 @@ $border-radius: 7px;
       padding: 10px;
       border: 1px solid #ced4da;
     }
+    &.inline {
+      display: inline;
+      margin: 0;
+      background-color: transparent;
+    }
   }
   hr {
     border-top: 1px solid $palette-light!important;
