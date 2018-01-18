@@ -32,6 +32,27 @@ To highlight the active location of your book in the header, specify `active-loc
 
 The active class will be added to the nav item with the corresponding id: `id="nav__list--${active-location}"`. For example, the above configuration will highlight any nav item where `id="nav__list--workshop"`.
 
+## Images
+Standard markdown images will be centered.
+
+For variation in styling and sizes, you can use simple html. Include the size, if any, using html "height"="300" or "width"="600" and one or more of the following classes:
+
+**left**: left justfied, top and bottom margins only, no padding
+**right**: float right; top, bottom, and left margins
+**display**: adds more padding and margin
+**border**: adds padding and a border with rounded corners
+
+### Examples
+
+```
+<img class="border display" src="/img/signal-flow-service.png" height="300" />
+
+<img class="right border" src="/img/expressions/rename.png" width="250"/>
+
+<img class="left" src="/img/cloud/Hello-SelectSystemCreateInstancePoint.png" width="600" />
+
+```
+
 ## Blocks
 
 ### Video Embed
