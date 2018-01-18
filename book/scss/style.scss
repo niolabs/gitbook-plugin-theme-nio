@@ -269,6 +269,23 @@ body.session--active {
 }
 
 // add nio css theme styles
+.n-button--inverse,
+.n-button--inverse button {
+  background: transparent;
+  border-color: #fff;
+  border-width: 1px;
+  color: #fff;
+  opacity: 1;
+  box-shadow: none;
+  &:hover {
+    background: transparent;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
 .markdown-section {
   color: $palette-black;
   hr {
@@ -549,20 +566,4 @@ body.session--active {
   &:hover {
     background: rgba($palette-zinc, 0.5);
   }
-}
-.n-button--inverse,
-.n-button--inverse button {
-  background: transparent;
-  border-color: #fff;
-  border-width: 1px;
-  color: #fff;
-  opacity: 1;
-  box-shadow: none;
-  &:hover {
-    background: transparent;
-  }
-}
-
-.clearfix {
-  clear: both;
 }
