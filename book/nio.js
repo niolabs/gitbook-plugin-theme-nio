@@ -6,9 +6,22 @@ require(["gitbook"], function(gitbook) {
         $('.book-header').removeClass('toc-open');
       };
 
+      function bindScrollEvent() {
+        const scrollDistance = 50;
+        $(window).bind('scroll', function() {
+          if ($(window).scrollTop() > scrollDistance) {
+            $('body').addClass('scrolled');
+          }
+          else {
+            $('body').removeClass('scrolled');
+          }
+        });
+      }
+
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
         $(window).scrollTop(0);
+        bindScrollEvent();
         resetToc();
         $('.accordion').removeClass('accordionClose');
         $('table').wrap('<div class="scrolling-wrapper"></div>');
