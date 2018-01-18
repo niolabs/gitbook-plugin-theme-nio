@@ -123,6 +123,14 @@ require(["gitbook"], function(gitbook) {
         // attach book-header to header and add custom content
         $('.header').after($('.book-header'));
         $('.js-toolbar-action').after( $('.custom-book-header-content'));
-
     });
 });
+
+function checkNioSession() {
+  const loggedIn = /^(.*;)?\s*nio_session\s*=/.test(document.cookie);
+  if (loggedIn) {
+    document.body.classList.add('session--active');
+  }
+}
+
+checkNioSession();

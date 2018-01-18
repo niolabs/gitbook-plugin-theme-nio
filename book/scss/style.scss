@@ -4,6 +4,24 @@
 
 $border-radius: 7px;
 
+.nav__list--session {
+  display: none;
+}
+
+body.session--active {
+  .nav__list--session--mobile {
+    display: block;
+  }
+  .nav__list--session {
+    @media screen and (min-width: 1210px) {
+      display: inline-block;
+    }
+  }
+  .nav__list--no-session {
+    display: none;
+  }
+}
+
 .markdown-section, body {
   font: normal 400 16px / 1.6 Lato, sans serif;
   -ms-overflow-style: none;
@@ -519,6 +537,19 @@ $border-radius: 7px;
   background: rgba($palette-alert, 0.5);
   &:hover {
     background: rgba($palette-zinc, 0.5);
+  }
+}
+
+.n-button--inverse,
+.n-button--inverse button {
+  background: transparent;
+  border-color: #fff;
+  border-width: 1px;
+  color: #fff;
+  opacity: 1;
+  box-shadow: none;
+  &:hover {
+    background: transparent;
   }
 }
 
