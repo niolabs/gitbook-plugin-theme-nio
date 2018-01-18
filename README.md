@@ -37,10 +37,10 @@ Standard markdown images will be centered.
 
 For variation in styling and sizes, you can use simple html. Include the size, if any, using html "height"="300" or "width"="600" and one or more of the following classes:
 
-**left**: left justfied, top and bottom margins only, no padding
-**right**: float right; top, bottom, and left margins
-**display**: adds more padding and margin
-**border**: adds padding and a border with rounded corners
+- **left**: left justfied, top and bottom margins only, no padding
+- **right**: float right; top, bottom, and left margins
+- **display**: adds more padding and margin
+- **border**: adds padding and a border with rounded corners
 
 ### Examples
 
