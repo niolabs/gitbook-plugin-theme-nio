@@ -91,6 +91,9 @@ $border-radius: 7px;
     height: unset;
   }
 }
+#book-sidebar-container {
+  height: 100vh;
+}
 .book > .book-summary {
   max-height: 0;
   left: 0;
@@ -98,6 +101,14 @@ $border-radius: 7px;
   @media (min-width: 600px) {
     max-height: unset;
     transition: none;
+  }
+}
+@media (min-width: 600px) {
+  body.scrolled {
+    .book > .book-summary {
+      position: sticky;
+      float: left;
+    }
   }
 }
 
@@ -522,4 +533,6 @@ $border-radius: 7px;
   }
 }
 
-
+.clearfix {
+  clear: both;
+}
