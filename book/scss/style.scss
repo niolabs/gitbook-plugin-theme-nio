@@ -520,6 +520,9 @@ $border-radius: 7px;
   .accordionContent {
     text-align: center;
     max-height: 1000px;
+    pre {
+      text-align: left;
+    }
     @media print { max-height: unset; }
   }
   .accordionButton {
