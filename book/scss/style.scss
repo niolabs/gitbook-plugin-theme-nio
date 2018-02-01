@@ -283,6 +283,7 @@ $border-radius: 7px;
       box-shadow: 0 0 4px 2px #e6e9ee;
     }
     &.inline {
+      border-radius: 3px;
       display: inline;
       margin: 0;
       background-color: transparent;
