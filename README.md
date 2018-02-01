@@ -42,7 +42,7 @@ For variation in styling and sizes, you can use simple html. Include the size, i
 - **display**: adds more padding and margin
 - **border**: adds padding and a border with rounded corners
 - **shadow**: adds rounded corners and a box shadow, all margins
-- **inline**: no padding, no margins, display inline, use for images embedded in text, for example:
+- **inline**: no padding, no margins, display inline, small border radius, use for images embedded in text, for example:
   click the user icon <img class="inline" src="/img/organizations/user-icon.png" height="25"/> in the top navigation
 
 ### Examples
