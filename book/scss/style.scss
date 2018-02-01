@@ -277,6 +277,11 @@ $border-radius: 7px;
       padding: 10px;
       border: 1px solid #ced4da;
     }
+    &.shadow {
+      border-radius: $border-radius;
+      margin: 10px;
+      box-shadow: 0 0 4px 2px #e6e9ee;
+    }
     &.inline {
       display: inline;
       margin: 0;
