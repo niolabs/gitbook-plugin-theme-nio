@@ -18,32 +18,76 @@ $border-radius: 7px;
   border-radius: 0 $border-radius $border-radius 0;
   border-width: 5px;
   color: $palette-slate;
+  &.callout {
+    padding-left: 3rem;
+    border-radius: $border-radius;
+    border: none;
+  }
+  .blockquote-icon {
+    margin-right: 0.5rem;
+  }
   &.info {
     background: rgba($palette-primary, 0.15);
-    border-color: $palette-primary;
     p:first-of-type {
       color: $palette-primary;
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 5px;
+        width: 60px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $palette-primary;
+      }
     }
   }
   &.warning {
     background: rgba($palette-warning, 0.18);
-    border-color: $palette-warning;
     p:first-of-type {
       color: $palette-warning;
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 5px;
+        width: 60px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $palette-warning;
+      }
     }
   }
   &.danger {
     background: rgba($palette-danger, 0.1);
-    border-color: $palette-danger;
     p:first-of-type {
       color: $palette-danger;
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 5px;
+        width: 60px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $palette-danger;
+      }
     }
   }
   &.success {
     background: rgba($palette-affirmative, 0.15);
-    border-color: $palette-affirmative;
     p:first-of-type {
       color: $palette-affirmative;
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 5px;
+        width: 60px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $palette-affirmative;
+      }
     }
   }
 }

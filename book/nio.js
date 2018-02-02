@@ -102,10 +102,10 @@ require(["gitbook"], function(gitbook) {
       };
 
       var iconMap = {
-          '[info]': '<i class="fa fa-info-circle"></i>',
-          '[warning]': '<i class="fa fa-exclamation-circle"></i>',
-          '[danger]': '<i class="fa fa-ban"></i>',
-          '[success]': '<i class="fa fa-check-circle"></i>'
+          '[info]': '<i class="fa fa-info-circle fa-2x blockquote-icon"></i>',
+          '[warning]': '<i class="fa fa-exclamation-circle fa-2x blockquote-icon"></i>',
+          '[danger]': '<i class="fa fa-ban fa-2x blockquote-icon"></i>',
+          '[success]': '<i class="fa fa-check-circle fa-2x blockquote-icon"></i>'
       };
 
       blkquotes.each(function() {
@@ -119,6 +119,7 @@ require(["gitbook"], function(gitbook) {
 
                 // add class
                 $(this).addClass(classMap[alertType]);
+                $(this).addClass('callout');
             }
         }
       })
