@@ -21,7 +21,7 @@ require(["gitbook"], function(gitbook) {
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
         if (window.location.hash === ""){
-          $(window).scrollTop(50);
+          $(window).scrollTop(0);
         };
         bindScrollEvent();
         resetToc();
