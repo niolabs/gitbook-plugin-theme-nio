@@ -32,6 +32,9 @@ To highlight the active location of your book in the header, specify `active-loc
 
 The active class will be added to the nav item with the corresponding id: `id="nav__list--${active-location}"`. For example, the above configuration will highlight any nav item where `id="nav__list--workshop"`.
 
+## Capitalization
+All nav elements, inputs, buttons, h1, and h2 elements are lowercased. To allow uppercase, add a <span class="allow-caps"></span> to override the text transformation. Remember not to use markdown inside of html elements like span. 
+
 ## Images
 Standard markdown images will be centered.
 
