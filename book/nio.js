@@ -20,7 +20,9 @@ require(["gitbook"], function(gitbook) {
 
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
-        $(window).scrollTop(0);
+        if (window.location.hash === ""){
+          $(window).scrollTop(50);
+        };
         bindScrollEvent();
         resetToc();
         $('.accordion').removeClass('accordionClose');
