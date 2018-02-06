@@ -24,6 +24,7 @@ $border-radius: 7px;
     border: none;
     p:first-of-type {
       color: $palette-slate;
+      text-transform: lowercase;
       &::after {
         content: '';
         display: block;
@@ -139,6 +140,9 @@ $border-radius: 7px;
       float: left;
     }
   }
+}
+.book-summary {
+  text-transform: lowercase;
 }
 
 .with-summary > .book-summary {
@@ -325,6 +329,7 @@ $border-radius: 7px;
   }
   h1 {
     @extend %nio-h1;
+    text-transform: lowercase;
     font-size: 40px;
     font-weight: 500;
     color: $palette-primary;
@@ -334,6 +339,7 @@ $border-radius: 7px;
   }
   h2 {
     @extend %nio-h2;
+    text-transform: lowercase;
     font-size: 36px;
     font-weight: 300;
     color: $palette-primary;
@@ -379,6 +385,7 @@ $border-radius: 7px;
     padding: 1rem 2rem;
     white-space: nowrap;
     min-width: 300px;
+    text-transform: lowercase;
     &:hover {
       color: #fff;
       background-color: $palette-primary;
@@ -454,6 +461,7 @@ $border-radius: 7px;
 
 .custom-book-header-content {
   color: $palette-black;
+  text-transform: lowercase;
 }
 
 // style search results pages
@@ -520,6 +528,7 @@ $border-radius: 7px;
     padding: 10px 15px;
     height: 45px;
     box-shadow: none;
+    text-transform: lowercase;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
