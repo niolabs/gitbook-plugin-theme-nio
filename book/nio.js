@@ -6,16 +6,18 @@ require(["gitbook"], function(gitbook) {
         $('.book-header').removeClass('toc-open');
       };
 
-      function bindScrollEvent() {
+      function setBodyScroll() {
         const scrollDistance = 50;
-        $(window).bind('scroll', function() {
-          if ($(window).scrollTop() > scrollDistance) {
-            $('body').addClass('scrolled');
-          }
-          else {
-            $('body').removeClass('scrolled');
-          }
-        });
+        if ($(window).scrollTop() > scrollDistance) {
+          $('body').addClass('scrolled');
+        }
+        else {
+          $('body').removeClass('scrolled');
+        }
+      }
+
+      function bindScrollEvent() {
+        $(window).bind('scroll', setBodyScroll);
       }
 
       function bindHashEvent() {
