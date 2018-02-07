@@ -21,8 +21,15 @@ require(["gitbook"], function(gitbook) {
       }
 
       function bindHashEvent() {
+        // for any link that includes a '#', but not only a '#'
         $('a[href*="#"]').click(function(e) {
-          $('html, body').animate({ scrollTop: $(e.currentTarget.hash).offset().top}, 1000);
+          // if an internal page link
+          if (e.currentTarget.href.includes(window.location.href)) {
+            $('html, body').animate({ scrollTop: $(e.currentTarget.hash).offset().top}, 1000);
+          // else append hash to page and go to page while keeping the url without the hash out of the history
+          } else {
+            window.location.replace(e.currentTarget.href + e.currentTarget.hash);
+          }
         });
       }
 
