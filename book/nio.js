@@ -18,11 +18,20 @@ require(["gitbook"], function(gitbook) {
         });
       }
 
+      function bindHashEvent() {
+        $('a[href*="#"]').click(function(e) {
+          $('html, body').animate({ scrollTop: $(e.currentTarget.hash).offset().top}, 1000);
+        });
+      }
+
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
         if (window.location.hash === ""){
           $(window).scrollTop(0);
+        } else {
+          $('html, body').animate({ scrollTop: $(window.location.hash).offset().top}, 1000);
         };
+        bindHashEvent();
         bindScrollEvent();
         resetToc();
         $('.accordion').removeClass('accordionClose');
