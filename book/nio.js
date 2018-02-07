@@ -24,11 +24,11 @@ require(["gitbook"], function(gitbook) {
         // for any link that includes a '#', but not only a '#'
         $('a[href*="#"]').click(function(e) {
           // if an internal page link
-          if (e.currentTarget.href.includes(window.location.href)) {
+          if (e.currentTarget.href.includes(window.location.pathname)) {
             $('html, body').animate({ scrollTop: $(e.currentTarget.hash).offset().top}, 1000);
           // else append hash to page and go to page while keeping the url without the hash out of the history
           } else {
-            window.location.replace(e.currentTarget.href + e.currentTarget.hash);
+            window.location.replace(e.currentTarget.href);
           }
         });
       }
@@ -40,6 +40,7 @@ require(["gitbook"], function(gitbook) {
         } else {
           $('html, body').animate({ scrollTop: $(window.location.hash).offset().top}, 1000);
         };
+        setBodyScroll();
         bindHashEvent();
         bindScrollEvent();
         resetToc();
