@@ -6,21 +6,42 @@ require(["gitbook"], function(gitbook) {
         $('.book-header').removeClass('toc-open');
       };
 
-      function bindScrollEvent() {
+      function setBodyScroll() {
         const scrollDistance = 50;
-        $(window).bind('scroll', function() {
-          if ($(window).scrollTop() > scrollDistance) {
-            $('body').addClass('scrolled');
-          }
-          else {
-            $('body').removeClass('scrolled');
+        if ($(window).scrollTop() > scrollDistance) {
+          $('body').addClass('scrolled');
+        }
+        else {
+          $('body').removeClass('scrolled');
+        }
+      }
+
+      function bindScrollEvent() {
+        $(window).bind('scroll', setBodyScroll);
+      }
+
+      function bindHashEvent() {
+        // for any link that includes a '#', but not only a '#'
+        $('a[href*="#"]').click(function(e) {
+          // if an internal page link
+          if (e.currentTarget.href.includes(window.location.pathname)) {
+            $('html, body').animate({ scrollTop: $(e.currentTarget.hash).offset().top}, 1000);
+          // else append hash to page and go to page while keeping the url without the hash out of the history
+          } else {
+            window.location.replace(e.currentTarget.href);
           }
         });
       }
 
       // scroll to top of header on page change, initialize TOC as closed
       $(document).ready(function(){
-        $(window).scrollTop(0);
+        if (window.location.hash === ""){
+          $(window).scrollTop(0);
+        } else {
+          $('html, body').animate({ scrollTop: $(window.location.hash).offset().top}, 1000);
+        };
+        setBodyScroll();
+        bindHashEvent();
         bindScrollEvent();
         resetToc();
         $('.accordion').removeClass('accordionClose');
@@ -102,10 +123,10 @@ require(["gitbook"], function(gitbook) {
       };
 
       var iconMap = {
-          '[info]': '<i class="fa fa-info-circle"></i>',
-          '[warning]': '<i class="fa fa-exclamation-circle"></i>',
-          '[danger]': '<i class="fa fa-ban"></i>',
-          '[success]': '<i class="fa fa-check-circle"></i>'
+          '[info]': '<i class="fa fa-info-circle fa-2x blockquote-icon"></i>',
+          '[warning]': '<i class="fa fa-exclamation-circle fa-2x blockquote-icon"></i>',
+          '[danger]': '<i class="fa fa-ban fa-2x blockquote-icon"></i>',
+          '[success]': '<i class="fa fa-check-circle fa-2x blockquote-icon"></i>'
       };
 
       blkquotes.each(function() {
@@ -119,6 +140,7 @@ require(["gitbook"], function(gitbook) {
 
                 // add class
                 $(this).addClass(classMap[alertType]);
+                $(this).addClass('callout');
             }
         }
       })
