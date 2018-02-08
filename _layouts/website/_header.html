@@ -40,22 +40,25 @@
           </ul>
         </li>
         <!-- Notifications—this element is only used in the portal, so no content and a static width to match the portal spacing -->
-        <li class="nav__list--item nav__list--item--notifications" style="width: 62px;">
-        </li>
+        <li class="nav__list--item nav__list--item--notifications nav__list--session show-on-desktop-only" style="width: 62px;"></li>
         <!-- Account Settings -->
-        <li class="nav__list--item nav__list--item--settings">
+        <li class="nav__list--item nav__list--item--settings nav__list--session nav__list--session--mobile">
           <a href="https://app.n.io/settings" class="nav__list--anchor">
             <i class="nio nio-profile"></i>
-            <span>Settings</span>
+            <span class="show-on-mobile-only">Settings</span>
           </a>
         </li>
-        <li class="nav__list--item nav__list--item--designer">
+        <li class="nav__list--item nav__list--item--designer nav__list--item--last nav__list--session">
           <a href="https://designer.n.io" target="_blank">
           <button class="n-button n-button--primary">
             go to designer
           </button>
           </a>
         </li>
+        <li class="nav__list--item nav__list--no-session">
+          <a href="https://app.n.io/login" class="nav__list--anchor">Log In</a>
+        </li>
+        <li class="nav__list--item nav__list--item--last nav__list--no-session"><a href="https://app.n.io/signup" class="nav__list--anchor"><button class="n-button n-button--inverse">sign up</button></a></li>
       </ul>
     </nav>
   </div>
