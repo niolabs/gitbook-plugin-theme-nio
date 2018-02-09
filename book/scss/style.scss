@@ -42,6 +42,7 @@ body.session--active {
     border: none;
     p:first-of-type {
       color: $palette-slate;
+      text-transform: lowercase;
       &::after {
         content: '';
         display: block;
@@ -157,6 +158,9 @@ body.session--active {
       float: left;
     }
   }
+}
+.book-summary {
+  text-transform: lowercase;
 }
 
 .with-summary > .book-summary {
@@ -297,20 +301,6 @@ body.session--active {
   }
 }
 
-// add nio css theme styles
-.n-button--inverse,
-.n-button--inverse button {
-  background: transparent;
-  border-color: #fff;
-  border-width: 1px;
-  color: #fff;
-  opacity: 1;
-  box-shadow: none;
-  &:hover {
-    background: transparent;
-  }
-}
-
 .clearfix {
   clear: both;
 }
@@ -360,6 +350,7 @@ body.session--active {
   }
   h1 {
     @extend %nio-h1;
+    text-transform: lowercase;
     font-size: 40px;
     font-weight: 500;
     color: $palette-primary;
@@ -369,6 +360,7 @@ body.session--active {
   }
   h2 {
     @extend %nio-h2;
+    text-transform: lowercase;
     font-size: 36px;
     font-weight: 300;
     color: $palette-primary;
@@ -414,6 +406,7 @@ body.session--active {
     padding: 1rem 2rem;
     white-space: nowrap;
     min-width: 300px;
+    text-transform: lowercase;
     &:hover {
       color: #fff;
       background-color: $palette-primary;
@@ -480,6 +473,9 @@ body.session--active {
       }
     }
   }
+  .allow-caps {
+    text-transform: none;
+  }
 }
 
 .label {
@@ -489,6 +485,7 @@ body.session--active {
 
 .custom-book-header-content {
   color: $palette-black;
+  text-transform: lowercase;
 }
 
 // style search results pages
@@ -555,6 +552,7 @@ body.session--active {
     padding: 10px 15px;
     height: 45px;
     box-shadow: none;
+    text-transform: lowercase;
     &:hover {
       @extend %nio-text-input;
       @extend %nio-text-input--singleline;
