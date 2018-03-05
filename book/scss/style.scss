@@ -367,6 +367,7 @@ body.session--active {
   }
   h3 {
     @extend %nio-h3;
+    text-transform: lowercase;
     font-size: 28px;
     font-weight: 400;
     color: $palette-primary;
