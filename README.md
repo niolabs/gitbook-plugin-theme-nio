@@ -33,7 +33,7 @@ To highlight the active location of your book in the header, specify `active-loc
 The active class will be added to the nav item with the corresponding id: `id="nav__list--${active-location}"`. For example, the above configuration will highlight any nav item where `id="nav__list--workshop"`.
 
 ## Capitalization
-All nav elements, inputs, buttons, h1, and h2 elements are lowercased. To allow uppercase, add a <span class="allow-caps"></span> to override the text transformation. Remember not to use markdown inside of html elements like span. 
+All nav elements, inputs, buttons, h1, and h2 elements are lowercased. To allow uppercase, add a <span class="allow-caps"></span> to override the text transformation. Remember not to use markdown inside of html elements like span.
 
 ## Images
 Standard markdown images will be centered.
@@ -64,8 +64,15 @@ For variation in styling and sizes, you can use simple html. Include the size, i
 ### Video Embed
 To embed a video, use the following block in the text of your book. The "watch" link will be transformed into a div containing an iframe with an embed url. Both YouTube and Vimeo links are supported.
 
+You can specify optional arguments to the video block such as height, width, and start (time to start video, in seconds). Defaults are height="100%", width="100%", and start="0".
+
 ```text
 {% video %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}
+```
+Example of video block with optional start argument to start the video three seconds in:
+
+```text
+{% video start="3" %}https://www.youtube.com/watch?v=OkfVMPjzkhE{% endvideo %}
 ```
 
 ### Dynamic Year

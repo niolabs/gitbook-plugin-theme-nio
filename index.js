@@ -1,6 +1,8 @@
-function getEmbedDiv(url, height, width){
-    height = height || '100%';
-    width = width || '100%';
+function getEmbedDiv(url, args){
+    height = args.height || '100%';
+    width = args.width || '100%';
+    start = args.start || 0;
+    startQuery = `start=${start}`;
 
     var content = '';
     var vimeoID = url.match(/^https?:\/\/(www\.)?vimeo\.com\/(clip\:)?(\d+).*$/);
@@ -9,7 +11,7 @@ function getEmbedDiv(url, height, width){
     var style = `border:none; position:absolute; top:0; left:0; width:${width}; height:${height}`;
 
     if (youTubeID) {
-        content = `<iframe style="${style}" src="https://www.youtube.com/embed/${youTubeID[1]}?rel=0" frameborder="0" allowfullscreen>`;
+        content = `<iframe style="${style}" src="https://www.youtube.com/embed/${youTubeID[1]}?rel=0&amp;${startQuery}" frameborder="0" allowfullscreen>`;
     } else if(vimeoID) {
         content = `<iframe style="${style}" src="https://player.vimeo.com/video/${vimeoID[3]} frameborder="0"></iframe>`;
     } else {
@@ -84,7 +86,7 @@ module.exports = {
         },
         video: {
             process: function(block) {
-                return getEmbedDiv(block.body);
+                return getEmbedDiv(block.body, block.kwargs);
             }
         },
         year: {
